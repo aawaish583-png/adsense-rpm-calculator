@@ -4,8 +4,8 @@
     <meta name="google-site-verification" content="AsSxWVdJ4axUcBgURKbw2MWDledUuHwql541dzESpHk" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AdSense RPM Calculator (Free) – Increase Website Ad Revenue Fast</title>
-    <meta name="description" Free AdSense RPM calculator to analyze low RPM, estimate lost revenue, and get proven tips to increase AdSense earnings in minutes.">
+    <title>AdSense RPM Calculator - Fix Low RPM & Increase Ad Revenue</title>
+    <meta name="description" content="Free AdSense RPM analyzer tool. Diagnose why your RPM is low, calculate lost revenue, and get actionable solutions to increase AdSense earnings effectively.">
     <link rel="canonical" href="https://aawais83-png.github.io/adsense-rpm-calculator/">
     
     <!-- Google Fonts -->
@@ -21,9 +21,9 @@
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "AI AdSense RPM Recovery Tool",
+        "name": "AdSense RPM Recovery Tool",
         "url": "https://aawais83-png.github.io/adsense-rpm-calculator/",
-        "description": "Advanced AI tool that analyzes AdSense RPM issues and provides recovery solutions",
+        "description": "Professional tool that analyzes AdSense RPM issues and provides recovery solutions",
         "applicationCategory": "FinanceApplication",
         "operatingSystem": "Any",
         "offers": {
@@ -33,8 +33,7 @@
         },
         "author": {
             "@type": "Organization",
-            "name": "AdSense Optimization Experts",
-            "url": "https://financetodaynews.xyz"
+            "name": "AdSense Optimization Experts"
         }
     }
     </script>
@@ -131,6 +130,51 @@
             line-height: 1.5;
             color: var(--text-primary);
             background-color: var(--bg-surface);
+            padding-top: 40px; /* Offset for fixed urgency banner */
+        }
+        
+        /* ===== URGENCY BANNER - FIXED ===== */
+        .urgency-banner {
+            background: linear-gradient(90deg, #ef4444 0%, #dc2626 100%);
+            color: white;
+            padding: var(--space-sm) 0;
+            text-align: center;
+            font-size: var(--text-sm);
+            font-weight: 600;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .countdown-timer {
+            display: inline-block;
+            background: white;
+            color: #dc2626;
+            padding: 0.125rem 0.5rem;
+            border-radius: var(--radius-sm);
+            margin-left: var(--space-xs);
+            font-weight: 700;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        
+        /* ===== HEADER - ADJUSTED FOR BANNER ===== */
+        header {
+            background: var(--bg-primary);
+            border-bottom: 1px solid var(--border-dark);
+            position: sticky;
+            top: 40px; /* Below urgency banner */
+            z-index: 1000;
         }
         
         /* ===== TYPOGRAPHY ===== */
@@ -360,15 +404,7 @@
             }
         }
         
-        /* ===== HEADER ===== */
-        header {
-            background: var(--bg-primary);
-            border-bottom: 1px solid var(--border-dark);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        
+        /* ===== NAVIGATION ===== */
         .nav-container {
             display: flex;
             align-items: center;
@@ -412,11 +448,23 @@
             padding: var(--space-xs) var(--space-sm);
             border-radius: var(--radius-sm);
             transition: color var(--transition-fast);
+            white-space: nowrap;
         }
         
-        .nav-link:hover {
+        .nav-link:hover,
+        .nav-link.active {
             color: var(--text-light);
             background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .nav-link.cta {
+            background: var(--accent-primary);
+            color: white;
+            padding: var(--space-xs) var(--space-md);
+        }
+        
+        .nav-link.cta:hover {
+            background: #0da271;
         }
         
         /* Mobile Navigation */
@@ -427,11 +475,12 @@
             font-size: var(--text-xl);
             cursor: pointer;
             padding: var(--space-xs);
+            z-index: 1002;
         }
         
         .mobile-nav {
             position: fixed;
-            top: 64px;
+            top: 104px; /* Below header and banner */
             left: 0;
             right: 0;
             background: var(--bg-secondary);
@@ -440,6 +489,9 @@
             flex-direction: column;
             gap: var(--space-sm);
             border-top: 1px solid var(--border-dark);
+            z-index: 1001;
+            max-height: calc(100vh - 104px);
+            overflow-y: auto;
         }
         
         .mobile-nav.active {
@@ -450,37 +502,20 @@
             color: var(--text-light);
             padding: var(--space-sm);
             border-radius: var(--radius-sm);
+            border-left: 3px solid transparent;
         }
         
-        .mobile-nav .nav-link:hover {
+        .mobile-nav .nav-link:hover,
+        .mobile-nav .nav-link.active {
             background: rgba(255, 255, 255, 0.1);
+            border-left-color: var(--accent-primary);
         }
         
-        /* ===== URGENCY BANNER ===== */
-        .urgency-banner {
-            background: linear-gradient(90deg, #ef4444 0%, #dc2626 100%);
+        .mobile-nav .nav-link.cta {
+            background: var(--accent-primary);
             color: white;
-            padding: var(--space-sm) 0;
             text-align: center;
-            font-size: var(--text-sm);
-            font-weight: 600;
-            position: relative;
-        }
-        
-        .countdown-timer {
-            display: inline-block;
-            background: white;
-            color: #dc2626;
-            padding: 0.125rem 0.5rem;
-            border-radius: var(--radius-sm);
-            margin-left: var(--space-xs);
-            font-weight: 700;
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
+            margin-top: var(--space-sm);
         }
         
         /* ===== HERO SECTION ===== */
@@ -488,6 +523,7 @@
             background: var(--bg-primary);
             padding: var(--space-2xl) 0;
             color: var(--text-light);
+            margin-top: 0;
         }
         
         .hero-content {
@@ -807,6 +843,45 @@
             padding: var(--space-lg);
         }
         
+        .content-card ul {
+            margin-left: var(--space-lg);
+            margin-bottom: var(--space-md);
+        }
+        
+        .content-card li {
+            margin-bottom: var(--space-xs);
+            color: var(--text-secondary);
+        }
+        
+        .internal-links {
+            background: #f8fafc;
+            border-radius: var(--radius-md);
+            padding: var(--space-md);
+            margin-top: var(--space-lg);
+            border-left: 4px solid var(--accent-primary);
+        }
+        
+        .internal-links h4 {
+            color: var(--accent-primary);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .internal-links a {
+            color: var(--accent-secondary);
+            text-decoration: none;
+            display: block;
+            padding: var(--space-xs) 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .internal-links a:last-child {
+            border-bottom: none;
+        }
+        
+        .internal-links a:hover {
+            color: var(--accent-primary);
+        }
+        
         /* ===== FAQ SECTION ===== */
         .faq-item {
             margin-bottom: var(--space-md);
@@ -830,20 +905,6 @@
             color: var(--text-secondary);
         }
         
-        /* ===== MOBILE STICKY CTA ===== */
-        .mobile-cta-bar {
-            display: none;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: var(--bg-primary);
-            border-top: 1px solid var(--border-dark);
-            padding: var(--space-sm);
-            z-index: 1000;
-            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-        }
-        
         /* ===== FOOTER ===== */
         footer {
             background: var(--bg-primary);
@@ -852,16 +913,29 @@
             border-top: 1px solid var(--border-dark);
         }
         
-        .footer-content {
-            text-align: center;
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-xl);
+            margin-bottom: var(--space-xl);
+        }
+        
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .footer-section h3 {
+            color: var(--text-light);
+            font-size: var(--text-lg);
+            margin-bottom: var(--space-md);
         }
         
         .footer-links {
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: var(--space-lg);
-            margin: var(--space-xl) 0;
+            flex-direction: column;
+            gap: var(--space-sm);
         }
         
         .footer-link {
@@ -875,10 +949,39 @@
             color: var(--text-light);
         }
         
+        .footer-bottom {
+            text-align: center;
+            padding-top: var(--space-xl);
+            border-top: 1px solid var(--border-dark);
+        }
+        
         .copyright {
             color: #94a3b8;
             font-size: var(--text-sm);
-            margin-top: var(--space-xl);
+            margin-top: var(--space-md);
+        }
+        
+        .affiliate-disclosure {
+            background: rgba(255, 255, 255, 0.05);
+            padding: var(--space-md);
+            border-radius: var(--radius-md);
+            margin-top: var(--space-lg);
+            font-size: var(--text-xs);
+            color: #94a3b8;
+        }
+        
+        /* ===== MOBILE STICKY CTA ===== */
+        .mobile-cta-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--bg-primary);
+            border-top: 1px solid var(--border-dark);
+            padding: var(--space-sm);
+            z-index: 1000;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
         }
         
         /* ===== UTILITY CLASSES ===== */
@@ -896,7 +999,10 @@
             /* Show desktop nav, hide mobile */
             .nav-desktop {
                 display: flex;
+                align-items: center;
                 gap: var(--space-sm);
+                overflow-x: auto;
+                padding: var(--space-xs) 0;
             }
             
             .mobile-menu-btn {
@@ -944,11 +1050,32 @@
             .select-options {
                 grid-template-columns: 1fr;
             }
+            
+            /* Adjust header for mobile */
+            header {
+                top: 40px;
+            }
         }
         
         @media (min-width: 1024px) {
             .container {
                 padding: 0 var(--space-2xl);
+            }
+            
+            .nav-desktop {
+                gap: var(--space-md);
+            }
+        }
+        
+        /* Tablet specific */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .nav-desktop {
+                gap: var(--space-xs);
+            }
+            
+            .nav-link {
+                padding: var(--space-xs);
+                font-size: var(--text-xs);
             }
         }
     </style>
@@ -963,18 +1090,22 @@
     <!-- Header -->
     <header>
         <div class="container nav-container">
-            <a href="#home" class="logo">
+            <a href="index.html" class="logo">
                 RPM<span class="logo-accent">AI</span>
                 <span class="logo-badge">PRO</span>
             </a>
             
             <!-- Desktop Navigation -->
             <nav class="nav-desktop">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#tool" class="nav-link">Analyze RPM</a>
-                <a href="#solution" class="nav-link">Fix It</a>
-                <a href="#content" class="nav-link">Guide</a>
-                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="bluehost-review.html" class="nav-link">Bluehost Review</a>
+                <a href="bluehost-vs-cheap-hosting.html" class="nav-link">Bluehost vs Cheap Hosting</a>
+                <a href="best-hosting-for-adsense.html" class="nav-link">Best Hosting for AdSense</a>
+                <a href="best-hosting-for-bloggers.html" class="nav-link">Best Hosting for Bloggers</a>
+                <a href="best-wordpress-hosting.html" class="nav-link">Best WordPress Hosting</a>
+                <a href="increase-adsense-rpm.html" class="nav-link">Increase AdSense RPM</a>
+                <a href="bluehost-coupon.html" class="nav-link">Bluehost Coupon</a>
+                <a href="#tool" class="nav-link cta">Start Free Analysis</a>
             </nav>
             
             <!-- Mobile Menu Button -->
@@ -983,11 +1114,15 @@
         
         <!-- Mobile Navigation -->
         <nav class="mobile-nav" id="mobileNav">
-            <a href="#home" class="nav-link">Home</a>
-            <a href="#tool" class="nav-link">Analyze RPM</a>
-            <a href="#solution" class="nav-link">Fix It</a>
-            <a href="#content" class="nav-link">Guide</a>
-            <a href="#faq" class="nav-link">FAQ</a>
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="bluehost-review.html" class="nav-link">Bluehost Review</a>
+            <a href="bluehost-vs-cheap-hosting.html" class="nav-link">Bluehost vs Cheap Hosting</a>
+            <a href="best-hosting-for-adsense.html" class="nav-link">Best Hosting for AdSense</a>
+            <a href="best-hosting-for-bloggers.html" class="nav-link">Best Hosting for Bloggers</a>
+            <a href="best-wordpress-hosting.html" class="nav-link">Best WordPress Hosting</a>
+            <a href="increase-adsense-rpm.html" class="nav-link">Increase AdSense RPM</a>
+            <a href="bluehost-coupon.html" class="nav-link">Bluehost Coupon</a>
+            <a href="#tool" class="nav-link cta">Start Free Analysis</a>
         </nav>
     </header>
 
@@ -998,7 +1133,7 @@
                 <div class="badge">🚨 URGENT: 84% of Publishers Are Under-Earning</div>
                 <h1>Stop Losing AdSense Money Every Month</h1>
                 <p class="hero-subtitle">
-                    Our AI tool reveals exactly <strong>why your RPM is low</strong> and how much revenue 
+                    Our professional tool reveals exactly <strong>why your RPM is low</strong> and how much revenue 
                     you're losing. Get a personalized recovery plan in 60 seconds.
                 </p>
                 
@@ -1034,7 +1169,7 @@
         <div class="container">
             <div class="warning-box">
                 <h4>⚠️ BEFORE YOU START: The Average Publisher Loses $3,720/Year</h4>
-                <p>Most websites have hidden technical issues killing their AdSense earnings. 
+                <p>Most websites have hidden technical issues affecting their AdSense earnings. 
                 Our analysis will show you exactly what's wrong and how to fix it.</p>
             </div>
         </div>
@@ -1046,7 +1181,7 @@
             <div class="tool-container">
                 <h2 class="text-center mb-lg">Find Out How Much You're Losing</h2>
                 <p class="text-center mb-xl" style="color: var(--text-secondary);">
-                    Enter your details below. Our AI will analyze your RPM against industry benchmarks.
+                    Enter your details below. Our analysis compares your RPM against industry benchmarks.
                 </p>
                 
                 <!-- Step Indicator -->
@@ -1210,7 +1345,7 @@
                     <!-- CTA -->
                     <div class="success-box" style="margin-top: var(--space-xl);">
                         <h4>✅ Good News: This Is Fixable</h4>
-                        <p>83% of publishers recover their lost earnings within 90 days by fixing these issues. 
+                        <p>Most publishers recover their earnings within 90 days by fixing these issues. 
                         The #1 solution is upgrading to optimized hosting.</p>
                         
                         <div class="text-center" style="margin-top: var(--space-lg);">
@@ -1251,7 +1386,7 @@
                     <div class="card">
                         <h3 class="mb-md" style="color: var(--accent-red);">⚠️ The Hosting Trap</h3>
                         <p class="mb-lg" style="font-weight: 600;">
-                            Cheap hosting is silently killing your AdSense revenue every day.
+                            Cheap hosting often negatively impacts your AdSense revenue.
                         </p>
                         
                         <div class="warning-box" style="margin-bottom: var(--space-lg);">
@@ -1278,8 +1413,8 @@
                         
                         <div style="background: #f8fafc; padding: var(--space-md); border-radius: var(--radius-md); border-left: 4px solid #94a3b8;">
                             <p style="font-size: var(--text-sm); margin: 0;">
-                                <strong>Fact:</strong> Google's ad auction pays 15-25% more to websites 
-                                that load in under 2 seconds.
+                                <strong>Fact:</strong> Google's ad auction system rewards websites 
+                                that load quickly with better ad rates and higher-quality advertisers.
                             </p>
                         </div>
                     </div>
@@ -1296,7 +1431,7 @@
                         </div>
                         
                         <p class="mb-lg">
-                            <strong>Bluehost</strong> is optimized specifically for AdSense publishers.
+                            <strong>Bluehost</strong> is optimized for content publishers and AdSense websites.
                         </p>
                         
                         <!-- Stats -->
@@ -1374,7 +1509,7 @@
                             <div style="font-size: var(--text-xs); color: var(--accent-primary); font-weight: 600;">+52% RPM</div>
                         </div>
                         <div class="testimonial-text">
-                            "Mobile traffic was killing my earnings. Bluehost's optimization 
+                            "Mobile traffic was affecting my earnings. Bluehost's optimization 
                             fixed Core Web Vitals. RPM went from $14.5 to $22.1."
                         </div>
                     </div>
@@ -1402,47 +1537,62 @@
                 <div class="content-grid">
                     <article class="content-card">
                         <h3>What is AdSense RPM and Why Yours Might Be Low</h3>
-                        <p>RPM (Revenue Per Mille) represents how much you earn per 1,000 pageviews. The average RPM varies by niche and geography:</p>
+                        <p>RPM (Revenue Per Mille) represents how much you earn per 1,000 pageviews. This metric is crucial for understanding your AdSense performance. The average RPM varies significantly by niche and geography:</p>
                         <ul>
                             <li>Finance/Business: $18-25 RPM (USA)</li>
                             <li>Technology/SaaS: $14-20 RPM (USA)</li>
                             <li>Health/Wellness: $16-22 RPM (USA)</li>
                             <li>Lifestyle: $8-12 RPM (USA)</li>
                         </ul>
-                        <p>If your RPM is 30%+ below these benchmarks, technical issues are likely costing you money.</p>
+                        <p>If your RPM is consistently below these benchmarks, technical issues are likely affecting your revenue. Common factors include slow loading times, poor mobile optimization, and hosting performance issues.</p>
+                        
+                        <div class="internal-links">
+                            <h4>Related Guides:</h4>
+                            <a href="increase-adsense-rpm.html">How to Increase AdSense RPM</a>
+                            <a href="best-hosting-for-adsense.html">Best Hosting for AdSense Sites</a>
+                        </div>
                     </article>
                     
                     <article class="content-card">
                         <h3>How Website Speed Directly Impacts AdSense Earnings</h3>
-                        <p>Google's ad auction system favors fast-loading websites with:</p>
+                        <p>Website loading speed is a critical factor in AdSense revenue generation. Google's ad auction system prioritizes fast-loading websites with:</p>
                         <ul>
-                            <li>Higher-quality ad placements</li>
-                            <li>Better viewability scores</li>
-                            <li>Premium advertiser competition</li>
-                            <li>Higher click-through rates</li>
+                            <li>Higher-quality ad placements and better viewability scores</li>
+                            <li>Increased advertiser competition for ad spaces</li>
+                            <li>Improved user engagement and click-through rates</li>
+                            <li>Better overall user experience reducing bounce rates</li>
                         </ul>
-                        <p>Research shows each 1-second delay reduces RPM by 5-8%.</p>
+                        <p>Industry research indicates that each 1-second delay in page loading can reduce RPM by 5-8%. This makes website speed optimization essential for maximizing AdSense revenue.</p>
                     </article>
                     
                     <article class="content-card">
                         <h3>Core Web Vitals & AdSense: The Hidden Connection</h3>
-                        <p>Google's Core Web Vitals (LCP, FID, CLS) aren't just SEO metrics—they directly affect your ad revenue:</p>
+                        <p>Google's Core Web Vitals (LCP, FID, CLS) aren't just SEO metrics—they directly influence your ad revenue potential:</p>
                         <ul>
-                            <li><strong>LCP (Loading Performance):</strong> Affects when ads load and become viewable</li>
-                            <li><strong>FID (Interactivity):</strong> Impacts user engagement with ads</li>
-                            <li><strong>CLS (Visual Stability):</strong> Affects ad placement and viewability</li>
+                            <li><strong>LCP (Largest Contentful Paint):</strong> Affects when ads load and become viewable to users</li>
+                            <li><strong>FID (First Input Delay):</strong> Impacts user interaction with ads and overall engagement</li>
+                            <li><strong>CLS (Cumulative Layout Shift):</strong> Affects ad placement stability and user experience</li>
                         </ul>
+                        <p>Websites that score well on Core Web Vitals typically see higher RPM due to better user engagement and ad performance.</p>
                     </article>
                     
                     <article class="content-card">
-                        <h3>Why Bluehost is Optimal for AdSense Publishers</h3>
-                        <p>After analyzing hosting performance data from thousands of AdSense sites, Bluehost consistently delivers:</p>
+                        <h3>Why Optimized Hosting Matters for AdSense Publishers</h3>
+                        <p>Your hosting provider plays a crucial role in AdSense performance. Quality hosting delivers:</p>
                         <ul>
-                            <li>Server response times under 400ms (vs 800ms+ on budget hosting)</li>
-                            <li>Built-in caching that improves LCP scores by 40%+</li>
-                            <li>Free SSL certificates essential for AdSense compliance</li>
-                            <li>WordPress optimization specifically for content sites</li>
+                            <li>Server response times under 400ms (compared to 800ms+ on budget hosting)</li>
+                            <li>Built-in caching that improves LCP scores by 40% or more</li>
+                            <li>Free SSL certificates essential for AdSense compliance and security</li>
+                            <li>WordPress optimization specifically designed for content-heavy sites</li>
                         </ul>
+                        <p>Based on analysis of hosting performance data from numerous AdSense sites, optimized hosting consistently delivers better RPM outcomes.</p>
+                        
+                        <div class="internal-links">
+                            <h4>Hosting Comparisons:</h4>
+                            <a href="bluehost-review.html">Bluehost Detailed Review</a>
+                            <a href="bluehost-vs-cheap-hosting.html">Bluehost vs Cheap Hosting</a>
+                            <a href="best-wordpress-hosting.html">Best WordPress Hosting Options</a>
+                        </div>
                     </article>
                 </div>
             </div>
@@ -1457,27 +1607,27 @@
                 
                 <div class="faq-item">
                     <div class="faq-question">How accurate is the RPM analysis?</div>
-                    <p class="faq-answer">Our AI model analyzes thousands of data points from 10,000+ AdSense publishers. It provides accurate estimates based on your specific niche, traffic geography, and performance metrics. The analysis achieves 85-90% accuracy compared to actual earnings data.</p>
+                    <p class="faq-answer">Our analysis model evaluates thousands of data points from AdSense publishers across different niches. It provides estimates based on your specific website category, traffic geography, and performance metrics. The analysis achieves good accuracy compared to actual earnings data from similar publishers.</p>
                 </div>
                 
                 <div class="faq-item">
                     <div class="faq-question">Will switching to Bluehost really increase my RPM?</div>
-                    <p class="faq-answer">Yes. 78% of publishers saw RPM increases of 25-60% within 90 days of upgrading to optimized hosting. The improvements come from better Core Web Vitals scores, faster load times (which Google rewards in ad auctions), and improved user engagement metrics.</p>
+                    <p class="faq-answer">Many publishers experience RPM improvements after upgrading to optimized hosting. The improvements typically come from better Core Web Vitals scores, faster load times (which Google rewards in ad auctions), and improved user engagement metrics. Results vary based on individual website factors.</p>
                 </div>
                 
                 <div class="faq-item">
                     <div class="faq-question">How long until I see improvements after switching hosting?</div>
-                    <p class="faq-answer">Technical improvements are immediate. Google typically recrawls sites within 1-2 weeks. Most publishers notice RPM improvements within 30 days, with full optimization benefits within 90 days.</p>
+                    <p class="faq-answer">Technical improvements are typically immediate after migration. Google usually recrawls sites within 1-2 weeks. Many publishers notice RPM improvements within 30 days, with full optimization benefits often realized within 90 days as performance metrics stabilize.</p>
                 </div>
                 
                 <div class="faq-item">
                     <div class="faq-question">Is Bluehost good for AdSense websites?</div>
-                    <p class="faq-answer">Bluehost is officially recommended by WordPress and is optimized for AdSense compliance. It provides the speed, security, and reliability needed for maximum AdSense earnings. Free SSL and built-in caching make it ideal for publishers.</p>
+                    <p class="faq-answer">Bluehost is officially recommended by WordPress and provides features optimized for AdSense compliance. It offers the speed, security, and reliability needed for content publishing. The free SSL and built-in caching make it suitable for publishers looking to maximize their AdSense performance.</p>
                 </div>
                 
                 <div class="faq-item">
                     <div class="faq-question">What if I'm not technical? Is migration difficult?</div>
-                    <p class="faq-answer">Bluehost offers free migration assistance for most websites. Their support team handles the technical aspects, and the process typically completes within 24-48 hours with zero downtime. Most users report the migration being seamless.</p>
+                    <p class="faq-answer">Bluehost offers migration assistance for most websites. Their support team can handle the technical aspects of migration, and the process typically completes within 24-48 hours with minimal downtime. Many users find the migration process straightforward with proper support.</p>
                 </div>
             </div>
         </div>
@@ -1497,32 +1647,50 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="logo" style="margin-bottom: var(--space-lg);">RPM<span class="logo-accent">AI</span></div>
-                
-                <div class="footer-links">
-                    <a href="#home" class="footer-link">Home</a>
-                    <a href="#tool" class="footer-link">Tool</a>
-                    <a href="#solution" class="footer-link">Solution</a>
-                    <a href="#content" class="footer-link">Guide</a>
-                    <a href="#faq" class="footer-link">FAQ</a>
-                    <a href="#privacy" class="footer-link">Privacy</a>
-                    <a href="#terms" class="footer-link">Terms</a>
+            <div class="footer-grid">
+                <!-- Brand Section -->
+                <div class="footer-section">
+                    <div class="logo" style="margin-bottom: var(--space-md);">RPM<span class="logo-accent">AI</span></div>
+                    <p style="color: #cbd5e1; font-size: var(--text-sm);">
+                        Professional tools and resources to help publishers maximize their AdSense revenue through technical optimization and best practices.
+                    </p>
                 </div>
-
-                  <nav>
-                     <a href="index.html"Home</a> |
-                     <a href="bluehost-review.html">Bluehost Review</a> |
-                     <a href="bluehost-vs-cheap-hosting.html">Privacy Policy</a>
-                  </nav>
+                
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html" class="footer-link">Home</a>
+                        <a href="bluehost-review.html" class="footer-link">Bluehost Review</a>
+                        <a href="bluehost-vs-cheap-hosting.html" class="footer-link">Bluehost vs Cheap Hosting</a>
+                        <a href="best-hosting-for-adsense.html" class="footer-link">Best Hosting for AdSense</a>
+                        <a href="best-hosting-for-bloggers.html" class="footer-link">Best Hosting for Bloggers</a>
+                        <a href="best-wordpress-hosting.html" class="footer-link">Best WordPress Hosting</a>
+                        <a href="increase-adsense-rpm.html" class="footer-link">Increase AdSense RPM</a>
+                        <a href="bluehost-coupon.html" class="footer-link">Bluehost Coupon</a>
+                    </div>
+                </div>
+                
+                <!-- Legal Links -->
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <div class="footer-links">
+                        <a href="about-us.html" class="footer-link">About Us</a>
+                        <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
+                        <a href="terms-of-service.html" class="footer-link">Terms of Service</a>
+                        <a href="affiliate-disclosure.html" class="footer-link">Affiliate Disclosure</a>
+                        <a href="contact.html" class="footer-link">Contact</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="affiliate-disclosure">
+                    <strong>Affiliate Disclosure:</strong> We earn commissions from qualifying purchases through Bluehost links. This supports our free tool development. This is an educational tool and does not guarantee specific income results. AdSense is a trademark of Google LLC. Individual results may vary based on multiple factors including website content, traffic quality, and optimization efforts.
+                </div>
                 
                 <div class="copyright">
                     <p>© 2026 RPM AI. All rights reserved.</p>
-                    <p style="margin-top: var(--space-xs);">
-                        <strong>Affiliate Disclosure:</strong> We earn commissions from qualifying purchases through Bluehost links. 
-                        This supports our free tool development. Educational tool. No income guarantees. 
-                        AdSense is a trademark of Google LLC.
-                    </p>
                 </div>
             </div>
         </div>
@@ -1545,6 +1713,14 @@
                 mobileNav.classList.remove('active');
                 mobileMenuBtn.textContent = '☰';
             });
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!event.target.closest('.nav-container') && mobileNav.classList.contains('active')) {
+                mobileNav.classList.remove('active');
+                mobileMenuBtn.textContent = '☰';
+            }
         });
         
         // ===== COUNTDOWN TIMER =====
@@ -1784,43 +1960,38 @@
                         block: 'start'
                     });
                 }, 500);
-                
-                // Track analysis
-                console.log('RPM Analysis Completed:', {
-                    url: document.getElementById('websiteUrl')?.value,
-                    pageviews: document.getElementById('pageviewsSlider')?.value,
-                    timestamp: new Date().toISOString()
-                });
             });
             
-            // Smooth scrolling
+            // Smooth scrolling for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     const href = this.getAttribute('href');
-                    if (href === '#' || href.includes('bluehost')) return;
+                    if (href === '#') return;
                     
                     e.preventDefault();
                     const targetId = href.substring(1);
                     const targetElement = document.getElementById(targetId);
                     
                     if (targetElement) {
+                        const offset = 120; // Account for fixed header and banner
                         window.scrollTo({
-                            top: targetElement.offsetTop - 80,
+                            top: targetElement.offsetTop - offset,
                             behavior: 'smooth'
                         });
                     }
                 });
             });
             
-            // Track Bluehost clicks
-            document.querySelectorAll('a[href*="bluehost"]').forEach(link => {
-                link.addEventListener('click', function(e) {
-                    console.log('Bluehost Click:', {
-                        source: this.textContent.trim(),
-                        timestamp: new Date().toISOString()
-                    });
-                });
+            // Set active menu item based on current page
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            document.querySelectorAll('.nav-link[href="' + currentPage + '"]').forEach(link => {
+                link.classList.add('active');
             });
+            
+            // Highlight home if on index
+            if (currentPage === 'index.html' || currentPage === '') {
+                document.querySelector('.nav-link[href="index.html"]').classList.add('active');
+            }
         });
         
         // Add FAQ Schema
@@ -1835,7 +2006,7 @@
                     "name": "How accurate is the RPM analysis?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Our AI model analyzes thousands of data points from 10,000+ AdSense publishers. It provides accurate estimates based on your specific niche, traffic geography, and performance metrics."
+                        "text": "Our analysis model evaluates thousands of data points from AdSense publishers across different niches. It provides estimates based on your specific website category, traffic geography, and performance metrics."
                     }
                 },
                 {
@@ -1843,7 +2014,7 @@
                     "name": "Will switching to Bluehost really increase my RPM?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Yes. 78% of publishers saw RPM increases of 25-60% within 90 days of upgrading to optimized hosting. The improvements come from better Core Web Vitals scores and faster load times."
+                        "text": "Many publishers experience RPM improvements after upgrading to optimized hosting. The improvements typically come from better Core Web Vitals scores, faster load times, and improved user engagement metrics."
                     }
                 },
                 {
@@ -1851,7 +2022,7 @@
                     "name": "How long until I see improvements after switching hosting?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Technical improvements are immediate. Google typically recrawls sites within 1-2 weeks. Most publishers notice RPM improvements within 30 days."
+                        "text": "Technical improvements are typically immediate after migration. Google usually recrawls sites within 1-2 weeks. Many publishers notice RPM improvements within 30 days, with full optimization benefits often realized within 90 days."
                     }
                 }
             ]
