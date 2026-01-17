@@ -168,25 +168,34 @@
             color: var(--accent);
         }
         
-        /* Desktop Navigation */
+        /* Desktop Navigation - ALWAYS VISIBLE */
         .nav-desktop {
             display: flex;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
         
         .nav-desktop ul {
             display: flex;
             list-style: none;
-            gap: 1.5rem;
+            gap: 1rem;
             align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: flex-end;
         }
         
         .nav-desktop a {
             color: var(--dark);
             font-weight: 500;
-            font-size: 0.95rem;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
+            font-size: 0.85rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
             transition: all 0.3s;
+            white-space: nowrap;
+            display: inline-block;
         }
         
         .nav-desktop a:hover,
@@ -198,10 +207,11 @@
         .nav-desktop .cta-button {
             background: linear-gradient(135deg, var(--accent), #25a954);
             color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
             font-weight: 600;
-            margin-left: 1rem;
+            font-size: 0.85rem;
+            margin-left: 0.5rem;
         }
         
         .nav-desktop .cta-button:hover {
@@ -211,70 +221,40 @@
             color: white;
         }
         
-        /* Mobile Navigation */
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--primary);
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 0.5rem;
-        }
-        
+        /* Mobile Navigation - ALWAYS VISIBLE */
         .mobile-nav {
-            position: fixed;
-            top: 0;
-            left: -100%;
-            width: 300px;
-            height: 100vh;
+            display: none; /* Hidden by default, shown via media query */
+            width: 100%;
             background: white;
-            padding: 5rem 2rem 2rem;
-            box-shadow: 5px 0 30px rgba(0, 0, 0, 0.1);
-            transition: left 0.3s ease;
-            z-index: 999;
-            overflow-y: auto;
-        }
-        
-        .mobile-nav.active {
-            left: 0;
+            padding: 1rem 0;
+            border-top: 1px solid var(--border);
         }
         
         .mobile-nav ul {
             list-style: none;
             display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+            align-items: center;
         }
         
         .mobile-nav a {
-            display: block;
-            padding: 1rem 1.5rem;
             color: var(--dark);
             font-weight: 500;
-            border-radius: 8px;
+            font-size: 0.8rem;
+            padding: 0.4rem 0.7rem;
+            border-radius: 6px;
             transition: all 0.3s;
+            white-space: nowrap;
+            display: inline-block;
         }
         
         .mobile-nav a:hover,
         .mobile-nav a.active {
             background: rgba(0, 115, 170, 0.08);
             color: var(--secondary);
-        }
-        
-        .mobile-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 998;
-        }
-        
-        .mobile-overlay.active {
-            display: block;
         }
         
         /* Hero Section */
@@ -569,7 +549,7 @@
             color: #cbd5e0;
         }
         
-        /* Responsive Design */
+        /* Responsive Design - MENU ALWAYS VISIBLE */
         @media (max-width: 1024px) {
             h1 {
                 font-size: 2.5rem;
@@ -577,6 +557,15 @@
             
             h2 {
                 font-size: 2rem;
+            }
+            
+            .nav-desktop ul {
+                gap: 0.75rem;
+            }
+            
+            .nav-desktop a {
+                font-size: 0.8rem;
+                padding: 0.35rem 0.7rem;
             }
         }
         
@@ -593,16 +582,27 @@
                 font-size: 1.75rem;
             }
             
+            /* Mobile navigation ALWAYS VISIBLE */
             .nav-desktop {
                 display: none;
             }
             
-            .mobile-menu-btn {
+            .mobile-nav {
                 display: block;
             }
             
+            .mobile-nav ul {
+                justify-content: center;
+                gap: 0.5rem;
+            }
+            
+            .mobile-nav a {
+                font-size: 0.75rem;
+                padding: 0.3rem 0.6rem;
+            }
+            
             .hero {
-                padding: 4rem 0 3rem;
+                padding: 5rem 0 3rem;
             }
             
             .hero:before {
@@ -629,10 +629,36 @@
             }
         }
         
+        @media (max-width: 480px) {
+            .mobile-nav ul {
+                gap: 0.3rem;
+            }
+            
+            .mobile-nav a {
+                font-size: 0.7rem;
+                padding: 0.25rem 0.5rem;
+            }
+        }
+        
         @media (min-width: 769px) {
-            .mobile-nav,
-            .mobile-overlay {
-                display: none !important;
+            .mobile-nav {
+                display: none;
+            }
+            
+            .nav-desktop {
+                display: flex;
+            }
+        }
+        
+        /* Extra small devices */
+        @media (max-width: 360px) {
+            .mobile-nav a {
+                font-size: 0.65rem;
+                padding: 0.2rem 0.4rem;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -643,7 +669,7 @@
         <div class="container header-container">
             <a href="index.html" class="logo">Blog<span>Host</span></a>
             
-            <!-- Desktop Navigation -->
+            <!-- Desktop Navigation - ALWAYS VISIBLE on desktop/tablet -->
             <nav class="nav-desktop">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -654,35 +680,34 @@
                     <li><a href="best-wordpress-hosting.html">WordPress Hosting</a></li>
                     <li><a href="increase-adsense-rpm.html">Increase RPM</a></li>
                     <li><a href="bluehost-coupon.html">Coupon</a></li>
-                    <li><a href="bluehost-review-2026.html" class="cta-button">Get Bluehost Discount</a></li>
+                    <li><a href="why-adsense-rpm-is-low.html">RPM Issues</a></li>
+                    <li><a href="website-speed-adsense-rpm.html">Speed & RPM</a></li>
+                    <li><a href="hosting-impact-on-adsense.html">Hosting Impact</a></li>
+                    <li><a href="shared-hosting-vs-bluehost.html">Shared vs Bluehost</a></li>
+                    <li><a href="bluehost-for-high-traffic.html">High Traffic</a></li>
+                    <li><a href="adsense-speed-case-study.html">Case Study</a></li>
+                    <li><a href="bluehost-performance-test.html">Performance Test</a></li>
+                    <li><a href="bluehost-pros-cons.html">Pros & Cons</a></li>
+                    <li><a href="what-is-adsense-rpm.html">What is RPM</a></li>
+                    <li><a href="best-hosting-for-beginners.html">Beginners Guide</a></li>
+                    <li><a href="bluehost-review-2026.html" class="cta-button">Get Bluehost</a></li>
                 </ul>
             </nav>
-            
-            <!-- Mobile Menu Button -->
-            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
         </div>
         
-        <!-- Mobile Navigation -->
-        <nav class="mobile-nav" id="mobileNav">
+        <!-- Mobile Navigation - ALWAYS VISIBLE on mobile -->
+        <nav class="mobile-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="bluehost-review-2026.html">Bluehost Review</a></li>
-                <li><a href="bluehost-vs-cheap-hosting.html">Bluehost vs Cheap</a></li>
-                <li><a href="best-hosting-for-adsense.html">Best for AdSense</a></li>
-                <li><a href="best-hosting-for-bloggers.html" class="active">Best for Bloggers</a></li>
-                <li><a href="best-wordpress-hosting.html">WordPress Hosting</a></li>
-                <li><a href="increase-adsense-rpm.html">Increase RPM</a></li>
+                <li><a href="bluehost-review-2026.html">Bluehost</a></li>
+                <li><a href="best-hosting-for-bloggers.html" class="active">Bloggers</a></li>
+                <li><a href="best-hosting-for-adsense.html">AdSense</a></li>
+                <li><a href="increase-adsense-rpm.html">RPM Guide</a></li>
+                <li><a href="best-wordpress-hosting.html">WordPress</a></li>
                 <li><a href="bluehost-coupon.html">Coupon</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="privacy.html">Privacy</a></li>
-                <li><a href="terms.html">Terms</a></li>
-                <li><a href="bluehost-review-2026.html" style="background: var(--accent); color: white; text-align: center; margin-top: 1rem;">Get Bluehost Discount</a></li>
+                <li><a href="bluehost-review-2026.html" style="background: var(--accent); color: white; padding: 0.4rem 0.8rem; border-radius: 6px;">Get Bluehost</a></li>
             </ul>
         </nav>
-        
-        <!-- Mobile Overlay -->
-        <div class="mobile-overlay" id="mobileOverlay"></div>
     </header>
 
     <!-- Hero Section -->
@@ -1171,25 +1196,6 @@
 
     <!-- JavaScript -->
     <script>
-        // Mobile Navigation
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileNav = document.getElementById('mobileNav');
-        const mobileOverlay = document.getElementById('mobileOverlay');
-        
-        function toggleMobileMenu() {
-            mobileNav.classList.toggle('active');
-            mobileOverlay.classList.toggle('active');
-            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
-        }
-        
-        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
-        mobileOverlay.addEventListener('click', toggleMobileMenu);
-        
-        // Close mobile menu when clicking links
-        document.querySelectorAll('.mobile-nav a').forEach(link => {
-            link.addEventListener('click', toggleMobileMenu);
-        });
-        
         // FAQ Toggle
         document.querySelectorAll('.faq-question').forEach(question => {
             question.addEventListener('click', () => {
