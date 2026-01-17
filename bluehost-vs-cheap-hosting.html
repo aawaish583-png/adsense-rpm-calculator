@@ -113,17 +113,11 @@
         
         /* Header & Navigation */
         .site-header {
-            background: white;
+            background: var(--primary);
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid var(--border);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            transition: box-shadow 0.3s ease;
-        }
-        
-        .site-header.scrolled {
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         
         .header-container {
@@ -131,93 +125,77 @@
             justify-content: space-between;
             align-items: center;
             padding: 1rem 0;
-            position: relative;
         }
         
         .logo {
             font-family: 'Source Serif Pro', serif;
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--primary);
+            color: white;
             text-decoration: none;
-            z-index: 1002;
         }
         
         .logo span {
             color: var(--success);
         }
         
-        /* Desktop & Tablet Navigation */
+        /* Desktop Navigation */
         .nav-desktop {
-            display: flex;
-            align-items: center;
+            display: none;
         }
         
         .nav-desktop ul {
             display: flex;
             list-style: none;
-            gap: 1.25rem;
+            gap: 1.5rem;
             align-items: center;
-            flex-wrap: wrap;
         }
         
         .nav-desktop a {
-            color: var(--dark);
-            font-size: 0.9rem;
+            color: #cbd5e0;
+            font-size: 0.95rem;
             font-weight: 500;
             padding: 0.5rem 0.75rem;
             border-radius: 4px;
             transition: all 0.2s;
-            white-space: nowrap;
         }
         
         .nav-desktop a:hover,
         .nav-desktop a.active {
-            color: var(--secondary);
-            background: rgba(0, 115, 170, 0.05);
+            color: white;
+            background: rgba(255,255,255,0.1);
         }
         
         .nav-desktop .cta-button {
             background: var(--success);
             color: white;
-            padding: 0.6rem 1.25rem;
+            padding: 0.5rem 1.25rem;
             border-radius: 4px;
             font-weight: 600;
-            margin-left: 0.5rem;
         }
         
-        .nav-desktop .cta-button:hover {
-            background: #2d9b63;
-            color: white;
-        }
-        
-        /* Mobile Navigation Toggle */
+        /* Mobile Navigation */
         .mobile-menu-btn {
-            display: none;
             background: none;
             border: none;
-            color: var(--primary);
+            color: white;
             font-size: 1.5rem;
             cursor: pointer;
-            padding: 0.5rem;
-            z-index: 1002;
+            padding: 0.25rem;
         }
         
-        /* Mobile Navigation Panel */
         .mobile-nav {
             position: fixed;
-            top: 0;
+            top: 64px;
             left: 0;
             right: 0;
-            bottom: 0;
-            background: white;
-            padding: 5rem 1.5rem 2rem;
+            background: var(--primary);
+            padding: 1rem;
             display: none;
             flex-direction: column;
-            gap: 0.75rem;
-            z-index: 1001;
-            overflow-y: auto;
-            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+            gap: 0.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            z-index: 999;
         }
         
         .mobile-nav.active {
@@ -225,45 +203,17 @@
         }
         
         .mobile-nav a {
-            color: var(--dark);
+            color: white;
             text-decoration: none;
-            padding: 1rem 1.25rem;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-weight: 500;
-            border: 1px solid var(--border);
-            transition: all 0.2s;
+            padding: 0.75rem 1rem;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: background 0.2s;
         }
         
         .mobile-nav a:hover,
         .mobile-nav a.active {
-            background: var(--secondary);
-            color: white;
-            border-color: var(--secondary);
-        }
-        
-        .mobile-nav .cta-button {
-            background: var(--success);
-            color: white;
-            font-weight: 600;
-            margin-top: 1rem;
-            text-align: center;
-        }
-        
-        /* Overlay for mobile menu */
-        .mobile-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.5);
-            z-index: 1000;
-        }
-        
-        .mobile-overlay.active {
-            display: block;
+            background: rgba(255,255,255,0.1);
         }
         
         /* Article Meta */
@@ -443,24 +393,27 @@
         }
         
         /* Responsive Design */
-        /* Tablet: 768px - 1023px */
-        @media (min-width: 768px) and (max-width: 1023px) {
-            .nav-desktop ul {
-                gap: 0.75rem;
+        @media (min-width: 768px) {
+            h1 { font-size: 3rem; }
+            h2 { font-size: 2.25rem; }
+            
+            .nav-desktop {
+                display: block;
             }
             
-            .nav-desktop a {
-                font-size: 0.85rem;
-                padding: 0.4rem 0.6rem;
+            .mobile-menu-btn {
+                display: none;
             }
             
-            .nav-desktop .cta-button {
-                padding: 0.5rem 1rem;
-                font-size: 0.85rem;
+            .stats-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+            .comparison-table {
+                font-size: 0.95rem;
             }
         }
         
-        /* Mobile: 0px - 767px */
         @media (max-width: 767px) {
             .container {
                 padding: 0 15px;
@@ -472,16 +425,6 @@
             
             h2 {
                 font-size: 1.75rem;
-            }
-            
-            /* Hide desktop nav on mobile */
-            .nav-desktop {
-                display: none;
-            }
-            
-            /* Show mobile menu button */
-            .mobile-menu-btn {
-                display: block;
             }
             
             .comparison-table {
@@ -501,24 +444,6 @@
             }
         }
         
-        /* Desktop: 1024px and up */
-        @media (min-width: 1024px) {
-            h1 { font-size: 3rem; }
-            h2 { font-size: 2.25rem; }
-            
-            .stats-grid {
-                grid-template-columns: repeat(4, 1fr);
-            }
-            
-            .comparison-table {
-                font-size: 0.95rem;
-            }
-            
-            .nav-desktop ul {
-                gap: 1.5rem;
-            }
-        }
-        
         /* Print Styles */
         @media print {
             .site-header,
@@ -535,7 +460,7 @@
         <div class="container header-container">
             <a href="index.html" class="logo">Host<span>Analysis</span></a>
             
-            <!-- Desktop & Tablet Navigation (visible on screens ≥ 768px) -->
+            <!-- Desktop Navigation -->
             <nav class="nav-desktop">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -545,16 +470,16 @@
                     <li><a href="best-hosting-for-bloggers.html">Best for Bloggers</a></li>
                     <li><a href="best-wordpress-hosting.html">WordPress Hosting</a></li>
                     <li><a href="increase-adsense-rpm.html">Increase RPM</a></li>
-                    <li><a href="bluehost-coupon.html">Coupon</a></li>
+                    <li><a href="bluehost-coupon.html">Bluehost Coupon</a></li>
                     <li><a href="bluehost-review.html" class="cta-button">Start Free Analysis</a></li>
                 </ul>
             </nav>
             
-            <!-- Mobile Menu Button (visible only on mobile) -->
+            <!-- Mobile Menu Button -->
             <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
         </div>
         
-        <!-- Mobile Navigation Panel (hidden by default, shown via JS) -->
+        <!-- Mobile Navigation -->
         <nav class="mobile-nav" id="mobileNav">
             <a href="index.html">Home</a>
             <a href="bluehost-review.html">Bluehost Review</a>
@@ -563,12 +488,8 @@
             <a href="best-hosting-for-bloggers.html">Best for Bloggers</a>
             <a href="best-wordpress-hosting.html">WordPress Hosting</a>
             <a href="increase-adsense-rpm.html">Increase RPM</a>
-            <a href="bluehost-coupon.html">Coupon</a>
-            <a href="bluehost-review.html" class="cta-button">Start Free Analysis</a>
+            <a href="bluehost-coupon.html">Bluehost Coupon</a>
         </nav>
-        
-        <!-- Mobile Overlay -->
-        <div class="mobile-overlay" id="mobileOverlay"></div>
     </header>
 
     <!-- Main Content -->
@@ -951,7 +872,7 @@
     <footer class="site-footer">
         <div class="container">
             <div class="footer-content">
-                <a href="index.html" class="logo" style="margin-bottom: 1.5rem; display: inline-block; color: white;">Host<span>Analysis</span></a>
+                <a href="index.html" class="logo" style="margin-bottom: 1.5rem; display: inline-block;">Host<span>Analysis</span></a>
                 
                 <div class="footer-links">
                     <a href="index.html" class="footer-link">Home</a>
@@ -985,39 +906,21 @@
 
     <!-- JavaScript -->
     <script>
-        // Mobile Navigation Toggle
+        // Mobile Navigation
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileNav = document.getElementById('mobileNav');
-        const mobileOverlay = document.getElementById('mobileOverlay');
-        const header = document.querySelector('.site-header');
         
-        function toggleMobileMenu() {
+        mobileMenuBtn.addEventListener('click', () => {
             mobileNav.classList.toggle('active');
-            mobileOverlay.classList.toggle('active');
             mobileMenuBtn.textContent = mobileNav.classList.contains('active') ? '✕' : '☰';
-            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
-        }
-        
-        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
-        mobileOverlay.addEventListener('click', toggleMobileMenu);
+        });
         
         // Close mobile menu when clicking a link
         document.querySelectorAll('.mobile-nav a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileNav.classList.remove('active');
-                mobileOverlay.classList.remove('active');
                 mobileMenuBtn.textContent = '☰';
-                document.body.style.overflow = '';
             });
-        });
-        
-        // Sticky header shadow on scroll
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 10) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
         });
         
         // Highlight current page in navigation
