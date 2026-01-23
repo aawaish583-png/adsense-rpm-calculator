@@ -90,7 +90,7 @@ All legal pages are written to meet global compliance and Google publisher requi
 ## 🌍 Live Website
 
 Visit the live website here:  
-👉 https://yourdomain.com
+👉 https://aawaish583-png.github.io/adsense-rpm-calculator/index.html
 
 (Replace with your actual domain)
 
@@ -100,8 +100,8 @@ Visit the live website here:
 
 If you have questions, suggestions, or feedback, feel free to contact us:
 
-📧 Email: contact@yourdomain.com  
-🌐 Website: https://yourdomain.com/contact-us.html
+📧 Email: kaifabbasi1655@gmail.com  
+🌐 Website: [https://aawaish583-png.github.io/adsense-rpm-calculator/index.html]
 
 ---
 
