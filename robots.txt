@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aawaish583-png.github.io/adsense-rpm-calculator/index.htmlsitemap.xml
