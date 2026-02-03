@@ -52,44 +52,37 @@
     </script>
     
     <style>
-        /* CSS Variables for Light/Dark Mode */
+        /* CSS Variables - Light Theme Only */
         :root {
-            /* Light Theme */
-            --primary-color: #1e40af;
-            --secondary-color: #3b82f6;
-            --accent-color: #0ea5e9;
-            --text-dark: #1e293b;
-            --text-light: #64748b;
+            /* Professional Color Scheme */
+            --primary-blue: #1a5fb4;    /* Main blue - High contrast */
+            --secondary-blue: #2d7ad6;  /* Secondary blue */
+            --accent-blue: #3584e4;     /* Accent blue */
+            --light-blue: #e6f0ff;      /* Light background blue */
+            --text-dark: #1a1a1a;       /* Main text - High contrast black */
+            --text-medium: #333333;     /* Secondary text */
+            --text-light: #555555;      /* Light text */
+            --white: #ffffff;
             --bg-color: #ffffff;
             --bg-secondary: #f8fafc;
             --border-color: #e2e8f0;
             --shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            --card-bg: #ffffff;
-            --footer-bg: #1e293b;
-            --footer-text: #cbd5e1;
-            --success: #10b981;
-            --warning: #f59e0b;
-            --danger: #ef4444;
+            
+            /* Button Colors - High Contrast */
+            --button-primary-bg: #1a5fb4;
+            --button-primary-text: #ffffff;
+            --button-secondary-bg: transparent;
+            --button-secondary-border: #1a5fb4;
+            --button-secondary-text: #1a5fb4;
+            
+            /* Status Colors */
+            --success: #2e7d32;
+            --warning: #f57c00;
+            --danger: #c62828;
             
             /* Navigation */
-            --nav-height: 65px;
+            --nav-height: 70px;
             --logo-size: 1.8rem;
-        }
-
-        .dark-mode {
-            /* Dark Theme */
-            --primary-color: #60a5fa;
-            --secondary-color: #3b82f6;
-            --accent-color: #0ea5e9;
-            --text-dark: #f1f5f9;
-            --text-light: #94a3b8;
-            --bg-color: #0f172a;
-            --bg-secondary: #1e293b;
-            --border-color: #334155;
-            --shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-            --card-bg: #1e293b;
-            --footer-bg: #0f172a;
-            --footer-text: #94a3b8;
         }
 
         * {
@@ -108,7 +101,6 @@
             color: var(--text-dark);
             line-height: 1.7;
             font-size: 17px;
-            transition: background-color 0.3s ease, color 0.3s ease;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -123,7 +115,7 @@
 
         /* Header & Navigation */
         header {
-            background-color: var(--card-bg);
+            background-color: var(--white);
             box-shadow: var(--shadow);
             position: sticky;
             top: 0;
@@ -143,7 +135,7 @@
         .logo {
             font-size: var(--logo-size);
             font-weight: 800;
-            color: var(--primary-color);
+            color: var(--primary-blue);
             text-decoration: none;
             display: flex;
             align-items: center;
@@ -153,7 +145,7 @@
         .logo-icon {
             width: 32px;
             height: 32px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
             border-radius: 6px;
             display: flex;
             align-items: center;
@@ -166,13 +158,12 @@
         nav {
             display: flex;
             align-items: center;
-            gap: 30px;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 25px;
+            gap: 30px;
             align-items: center;
         }
 
@@ -187,7 +178,7 @@
         }
 
         .nav-links a:hover {
-            color: var(--secondary-color);
+            color: var(--primary-blue);
         }
 
         .nav-links a::after {
@@ -197,57 +188,12 @@
             left: 0;
             width: 0;
             height: 2px;
-            background-color: var(--secondary-color);
+            background-color: var(--primary-blue);
             transition: width 0.3s;
         }
 
         .nav-links a:hover::after {
             width: 100%;
-        }
-
-        /* Theme Toggle */
-        .theme-toggle {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            cursor: pointer;
-            padding: 8px 12px;
-            border-radius: 20px;
-            background-color: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            user-select: none;
-        }
-
-        .toggle-switch {
-            position: relative;
-            width: 44px;
-            height: 22px;
-            background-color: var(--border-color);
-            border-radius: 11px;
-            transition: background-color 0.3s;
-        }
-
-        .toggle-switch::before {
-            content: '';
-            position: absolute;
-            width: 18px;
-            height: 18px;
-            border-radius: 50%;
-            background-color: var(--bg-color);
-            top: 2px;
-            left: 2px;
-            transition: transform 0.3s;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-        }
-
-        .dark-mode .toggle-switch::before {
-            transform: translateX(22px);
-        }
-
-        .theme-toggle span {
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--text-light);
         }
 
         .menu-toggle {
@@ -256,7 +202,7 @@
             border: none;
             font-size: 1.5rem;
             cursor: pointer;
-            color: var(--primary-color);
+            color: var(--primary-blue);
         }
 
         /* Main Content */
@@ -269,12 +215,13 @@
         .hero {
             text-align: center;
             padding: 60px 0;
-            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-color) 100%);
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--white) 100%);
             margin-bottom: 40px;
+            border-radius: 0 0 20px 20px;
         }
 
         h1 {
-            color: var(--primary-color);
+            color: var(--primary-blue);
             font-size: 2.8rem;
             margin-bottom: 20px;
             line-height: 1.2;
@@ -285,8 +232,8 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: white;
-            padding: 10px 20px;
+            background: var(--white);
+            padding: 12px 24px;
             border-radius: 50px;
             box-shadow: var(--shadow);
             margin: 20px 0;
@@ -294,7 +241,7 @@
         }
 
         .stars {
-            color: #fbbf24;
+            color: #f57c00;
             font-size: 1.2rem;
         }
 
@@ -304,11 +251,17 @@
             color: var(--text-dark);
         }
 
+        .review-count {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
         .hero-description {
             font-size: 1.2rem;
-            color: var(--text-light);
+            color: var(--text-medium);
             max-width: 800px;
             margin: 0 auto 30px;
+            line-height: 1.8;
         }
 
         .publish-date {
@@ -317,44 +270,51 @@
             margin-bottom: 20px;
         }
 
-        /* CTA Buttons */
+        /* CTA Buttons - High Contrast */
         .cta-button {
             display: inline-block;
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 14px 32px;
+            background-color: var(--button-primary-bg);
+            color: var(--button-primary-text);
+            padding: 16px 36px;
             border-radius: 8px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 1rem;
             transition: all 0.3s;
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
-            border: none;
+            box-shadow: 0 4px 12px rgba(26, 95, 180, 0.2);
+            border: 2px solid transparent;
             cursor: pointer;
             margin: 10px;
+            min-height: 50px;
+            line-height: 1.2;
         }
 
         .cta-button:hover {
-            background-color: var(--primary-color);
+            background-color: #0d4a9e;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 6px 20px rgba(26, 95, 180, 0.3);
+        }
+
+        .cta-button:focus {
+            outline: 3px solid var(--accent-blue);
+            outline-offset: 2px;
         }
 
         .cta-button.secondary {
-            background-color: transparent;
-            color: var(--secondary-color);
-            border: 2px solid var(--secondary-color);
+            background-color: var(--button-secondary-bg);
+            color: var(--button-secondary-text);
+            border: 2px solid var(--button-secondary-border);
             box-shadow: none;
         }
 
         .cta-button.secondary:hover {
-            background-color: var(--secondary-color);
+            background-color: var(--primary-blue);
             color: white;
         }
 
         .button-group {
             display: flex;
-            gap: 15px;
+            gap: 20px;
             justify-content: center;
             flex-wrap: wrap;
             margin: 30px 0;
@@ -362,13 +322,13 @@
 
         /* Content Sections */
         section {
-            margin: 50px 0;
+            margin: 60px 0;
         }
 
         h2 {
-            color: var(--primary-color);
+            color: var(--primary-blue);
             font-size: 2rem;
-            margin: 40px 0 20px;
+            margin: 50px 0 25px;
             padding-bottom: 15px;
             border-bottom: 2px solid var(--border-color);
             font-weight: 700;
@@ -377,13 +337,21 @@
         h3 {
             color: var(--text-dark);
             font-size: 1.5rem;
-            margin: 30px 0 15px;
+            margin: 35px 0 18px;
+            font-weight: 600;
+        }
+
+        h4 {
+            color: var(--text-dark);
+            font-size: 1.25rem;
+            margin: 25px 0 15px;
             font-weight: 600;
         }
 
         p {
             margin-bottom: 20px;
             line-height: 1.8;
+            color: var(--text-dark);
         }
 
         ul, ol {
@@ -392,8 +360,14 @@
         }
 
         li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             position: relative;
+            color: var(--text-dark);
+        }
+
+        strong, b {
+            color: var(--text-dark);
+            font-weight: 600;
         }
 
         /* Image Slider */
@@ -407,7 +381,8 @@
             margin: 0 auto;
             overflow: hidden;
             border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 1px solid var(--border-color);
         }
 
         .slider {
@@ -432,7 +407,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
             color: white;
             padding: 15px;
             font-size: 0.95rem;
@@ -449,35 +424,41 @@
         }
 
         .slider-btn {
-            background-color: rgba(255,255,255,0.2);
+            background-color: rgba(0,0,0,0.6);
             color: white;
-            border: none;
-            width: 40px;
-            height: 40px;
+            border: 2px solid white;
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             backdrop-filter: blur(5px);
             transition: background-color 0.3s;
+            font-weight: bold;
         }
 
         .slider-btn:hover {
-            background-color: rgba(255,255,255,0.3);
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        .slider-btn:focus {
+            outline: 3px solid var(--accent-blue);
+            outline-offset: 2px;
         }
 
         .slider-dots {
             display: flex;
             justify-content: center;
             gap: 8px;
-            margin-top: 15px;
+            margin-top: 20px;
         }
 
         .dot {
-            width: 10px;
-            height: 10px;
+            width: 12px;
+            height: 12px;
             border-radius: 50%;
             background-color: var(--border-color);
             cursor: pointer;
@@ -485,7 +466,12 @@
         }
 
         .dot.active {
-            background-color: var(--secondary-color);
+            background-color: var(--secondary-blue);
+        }
+
+        .dot:focus {
+            outline: 2px solid var(--accent-blue);
+            outline-offset: 2px;
         }
 
         /* Tables */
@@ -506,16 +492,17 @@
 
         .pricing-table th,
         .pricing-table td {
-            padding: 18px;
+            padding: 20px;
             text-align: left;
             border-bottom: 1px solid var(--border-color);
+            color: var(--text-dark);
         }
 
         .pricing-table th {
-            background-color: var(--primary-color);
+            background-color: var(--primary-blue);
             color: white;
-            font-weight: 600;
-            font-size: 1rem;
+            font-weight: 700;
+            font-size: 1.05rem;
         }
 
         .pricing-table tr:nth-child(even) {
@@ -523,12 +510,12 @@
         }
 
         .pricing-table tr:hover {
-            background-color: color-mix(in srgb, var(--secondary-color) 5%, transparent);
+            background-color: #e6f0ff;
         }
 
         .price-badge {
             display: inline-block;
-            padding: 4px 12px;
+            padding: 6px 14px;
             background-color: var(--success);
             color: white;
             border-radius: 4px;
@@ -539,20 +526,24 @@
         .price-renewal {
             color: var(--danger);
             font-size: 0.9rem;
+            font-weight: 600;
+            display: block;
+            margin-top: 5px;
         }
 
         /* Pros & Cons */
         .pros-cons-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
             margin: 40px 0;
         }
 
         .pros-box, .cons-box {
-            padding: 25px;
-            border-radius: 10px;
+            padding: 30px;
+            border-radius: 12px;
             transition: transform 0.3s;
+            box-shadow: var(--shadow);
         }
 
         .pros-box:hover, .cons-box:hover {
@@ -560,21 +551,20 @@
         }
 
         .pros-box {
-            background-color: #dbeafe;
-            border-left: 5px solid var(--secondary-color);
-        }
-
-        .dark-mode .pros-box {
-            background-color: rgba(59, 130, 246, 0.1);
+            background-color: #e6f0ff;
+            border-left: 5px solid var(--secondary-blue);
+            color: var(--text-dark);
         }
 
         .cons-box {
-            background-color: #fee2e2;
+            background-color: #ffe6e6;
             border-left: 5px solid var(--danger);
+            color: var(--text-dark);
         }
 
-        .dark-mode .cons-box {
-            background-color: rgba(239, 68, 68, 0.1);
+        .pros-box h3, .cons-box h3 {
+            color: var(--text-dark);
+            margin-top: 0;
         }
 
         /* FAQ Section */
@@ -583,11 +573,12 @@
             padding: 50px;
             border-radius: 15px;
             margin: 60px 0;
+            border: 1px solid var(--border-color);
         }
 
         .faq-item {
-            margin-bottom: 20px;
-            padding-bottom: 20px;
+            margin-bottom: 25px;
+            padding-bottom: 25px;
             border-bottom: 1px solid var(--border-color);
         }
 
@@ -606,16 +597,27 @@
         .faq-question h3 {
             margin: 0;
             font-size: 1.2rem;
-            color: var(--primary-color);
+            color: var(--primary-blue);
         }
 
         .faq-toggle {
             background: none;
             border: none;
-            font-size: 1.2rem;
-            color: var(--secondary-color);
+            font-size: 1.5rem;
+            color: var(--secondary-blue);
             cursor: pointer;
             padding: 5px;
+            min-width: 44px;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .faq-toggle:focus {
+            outline: 2px solid var(--accent-blue);
+            outline-offset: 2px;
+            border-radius: 4px;
         }
 
         .faq-answer {
@@ -631,7 +633,7 @@
 
         /* Conclusion */
         .conclusion {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
             color: white;
             padding: 50px;
             border-radius: 15px;
@@ -645,30 +647,114 @@
             margin-top: 0;
         }
 
+        .conclusion p {
+            color: white;
+        }
+
         .conclusion .cta-button {
             background-color: white;
-            color: var(--primary-color);
+            color: var(--primary-blue);
+            font-weight: 700;
         }
 
         .conclusion .cta-button:hover {
-            background-color: #f1f5f9;
+            background-color: #f5f5f5;
+        }
+
+        /* Content Boxes - Light Theme */
+        .content-box {
+            background-color: var(--white);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+        }
+
+        .toc-content-box {
+            background-color: var(--white);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+        }
+
+        .toc-content-box h2 {
+            margin-top: 0;
+            color: var(--primary-blue);
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background-color: #fff3e0;
+            border-left: 5px solid var(--warning);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            color: var(--text-dark);
+        }
+
+        /* Success Box */
+        .success-box {
+            background-color: #e8f5e9;
+            border-left: 5px solid var(--success);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            color: var(--text-dark);
+        }
+
+        /* Comparison Highlight */
+        .comparison-highlight {
+            background: linear-gradient(135deg, #e6f0ff 0%, #d1e2ff 100%);
+            padding: 35px;
+            border-radius: 12px;
+            margin: 40px 0;
+            border: 2px solid var(--secondary-blue);
+            color: var(--text-dark);
+        }
+
+        /* Feature List */
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .feature-item {
+            padding: 20px;
+            background-color: var(--bg-secondary);
+            border-radius: 10px;
+            border-left: 4px solid var(--secondary-blue);
+        }
+
+        .feature-item h4 {
+            color: var(--primary-blue);
+            margin-bottom: 10px;
         }
 
         /* Affiliate Disclosure */
         .affiliate-disclosure {
-            background-color: var(--bg-secondary);
+            background-color: #f8f9fa;
             border-left: 4px solid var(--warning);
-            padding: 15px 20px;
+            padding: 25px;
             margin: 40px 0;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            color: var(--text-light);
+            border-radius: 10px;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            border: 1px solid var(--border-color);
+        }
+
+        .affiliate-disclosure strong {
+            color: var(--text-dark);
         }
 
         /* Footer */
         footer {
-            background-color: var(--footer-bg);
-            color: var(--footer-text);
+            background-color: #1a1a1a;
+            color: #e0e0e0;
             padding: 60px 0 30px;
             margin-top: auto;
         }
@@ -694,6 +780,7 @@
             color: white;
             margin-bottom: 20px;
             font-size: 1.1rem;
+            font-weight: 600;
         }
 
         .footer-links {
@@ -705,7 +792,7 @@
         }
 
         .footer-links a {
-            color: var(--footer-text);
+            color: #b0b0b0;
             text-decoration: none;
             transition: color 0.3s;
         }
@@ -717,13 +804,14 @@
         .footer-bottom {
             text-align: center;
             padding-top: 30px;
-            border-top: 1px solid #334155;
-            color: #94a3b8;
+            border-top: 1px solid #333;
+            color: #999;
             font-size: 0.9rem;
         }
 
         .footer-bottom p {
             margin-bottom: 10px;
+            color: #999;
         }
 
         /* Responsive Design */
@@ -751,7 +839,7 @@
                 top: var(--nav-height);
                 left: 0;
                 width: 100%;
-                background-color: var(--card-bg);
+                background-color: var(--white);
                 flex-direction: column;
                 gap: 0;
                 padding: 20px 0;
@@ -781,11 +869,6 @@
             
             .menu-toggle {
                 display: block;
-            }
-            
-            .theme-toggle {
-                margin-left: auto;
-                margin-right: 15px;
             }
             
             .pros-cons-grid {
@@ -834,6 +917,10 @@
                 font-size: 1.6rem;
             }
             
+            h3 {
+                font-size: 1.3rem;
+            }
+            
             .hero {
                 padding: 40px 0;
             }
@@ -844,9 +931,18 @@
             }
             
             .slider-btn {
-                width: 35px;
-                height: 35px;
+                width: 40px;
+                height: 40px;
                 font-size: 1rem;
+            }
+            
+            .cta-button {
+                padding: 14px 28px;
+                font-size: 0.95rem;
+            }
+            
+            .feature-list {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -866,94 +962,27 @@
         /* Focus Styles */
         a:focus,
         button:focus {
-            outline: 2px solid var(--secondary-color);
+            outline: 3px solid var(--accent-blue);
             outline-offset: 2px;
         }
 
-        /* Content Boxes */
-        .content-box {
-            background-color: var(--card-bg);
-            border-radius: 10px;
-            padding: 25px;
-            margin: 30px 0;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border-color);
+        /* Links */
+        a:not(.cta-button):not(.footer-links a) {
+            color: var(--primary-blue);
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 3px;
         }
 
-        .feature-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-
-        .feature-item {
-            padding: 15px;
-            background-color: var(--bg-secondary);
-            border-radius: 8px;
-            border-left: 4px solid var(--secondary-color);
-        }
-
-        .feature-item h4 {
-            color: var(--primary-color);
-            margin-bottom: 10px;
-        }
-
-        /* Warning Box */
-        .warning-box {
-            background-color: #fef3c7;
-            border-left: 5px solid var(--warning);
-            padding: 20px;
-            border-radius: 8px;
-            margin: 30px 0;
-        }
-
-        .dark-mode .warning-box {
-            background-color: rgba(245, 158, 11, 0.1);
-        }
-
-        /* Success Box */
-        .success-box {
-            background-color: #d1fae5;
-            border-left: 5px solid var(--success);
-            padding: 20px;
-            border-radius: 8px;
-            margin: 30px 0;
-        }
-
-        .dark-mode .success-box {
-            background-color: rgba(16, 185, 129, 0.1);
-        }
-
-        /* Comparison Highlight */
-        .comparison-highlight {
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-            padding: 30px;
-            border-radius: 12px;
-            margin: 40px 0;
-            border: 2px solid var(--secondary-color);
-        }
-
-        .dark-mode .comparison-highlight {
-            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
-        }
-
-        /* AdSense Safe Spacing */
-        .ad-container {
-            margin: 40px 0;
-            text-align: center;
-            min-height: 100px;
-            background-color: var(--bg-secondary);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-light);
-            font-size: 0.9rem;
+        a:not(.cta-button):not(.footer-links a):hover {
+            color: #0d4a9e;
         }
     </style>
 </head>
 <body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-to-content sr-only">Skip to main content</a>
+
     <!-- Header -->
     <header>
         <div class="container nav-container">
@@ -973,20 +1002,13 @@
                     <li><a href="best-hosting-for-adsense.html">Hosting Reviews</a></li>
                     <li><a href="best-wordpress-hosting.html">Best WordPress Hosting</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li>
-                        <div class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                            <span>Dark</span>
-                            <div class="toggle-switch"></div>
-                            <span>Light</span>
-                        </div>
-                    </li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="container">
+    <main class="container" id="main-content">
         <article>
             <!-- Hero Section -->
             <section class="hero">
@@ -1016,9 +1038,9 @@
                 </div>
             </section>
 
-            <!-- Table of Contents -->
-            <nav class="content-box">
-                <h3>📋 Table of Contents</h3>
+            <!-- Table of Contents - FIXED to H2 -->
+            <nav class="toc-content-box">
+                <h2>Table of Contents</h2>
                 <ol>
                     <li><a href="#my-experience">My 2026 Bluehost Experience</a></li>
                     <li><a href="#pricing">Bluehost Pricing & Plans (Real 2026 Prices)</a></li>
@@ -1077,15 +1099,15 @@
                 
                 <div class="feature-list">
                     <div class="feature-item">
-                        <h4>⚡ Uptime Performance</h4>
+                        <h4>Uptime Performance</h4>
                         <p><strong>99.94% Uptime</strong> over 90 days with only 26 minutes of downtime</p>
                     </div>
                     <div class="feature-item">
-                        <h4>🚀 Loading Speed</h4>
+                        <h4>Loading Speed</h4>
                         <p><strong>1.2-1.8 seconds</strong> average loading time for WordPress sites</p>
                     </div>
                     <div class="feature-item">
-                        <h4>🎯 Server Response</h4>
+                        <h4>Server Response</h4>
                         <p><strong>350-500ms</strong> TTFB (Time to First Byte) on optimized setup</p>
                     </div>
                 </div>
@@ -1093,7 +1115,7 @@
                 <h3>Who Should Choose Bluehost in 2026?</h3>
                 
                 <div class="content-box">
-                    <p><strong>✅ Ideal For:</strong></p>
+                    <h4>Ideal For:</h4>
                     <ul>
                         <li><strong>First-time website owners</strong> - The onboarding process is incredibly smooth</li>
                         <li><strong>WordPress beginners</strong> - Official WordPress.org recommendation ensures compatibility</li>
@@ -1102,7 +1124,7 @@
                         <li><strong>Those needing phone support</strong> - 24/7 US-based phone support available</li>
                     </ul>
                     
-                    <p><strong>❌ Not Ideal For:</strong></p>
+                    <h4>Not Ideal For:</h4>
                     <ul>
                         <li>High-traffic e-commerce sites (consider WP Engine or SiteGround)</li>
                         <li>Developers needing advanced server control</li>
@@ -1117,65 +1139,66 @@
                 <h2>Bluehost Pricing & Plans 2026 (Real Prices)</h2>
                 
                 <div class="warning-box">
-                    <p><strong>⚠️ Important:</strong> Bluehost's introductory prices are heavily discounted. Renewal prices increase significantly. Always calculate the 3-year total cost before purchasing.</p>
+                    <h3>Important Notice</h3>
+                    <p>Bluehost's introductory prices are heavily discounted. Renewal prices increase significantly. Always calculate the 3-year total cost before purchasing.</p>
                 </div>
 
                 <div class="table-container">
                     <table class="pricing-table">
                         <thead>
                             <tr>
-                                <th>Feature</th>
-                                <th>Personal</th>
-                                <th>Starter</th>
-                                <th>Business</th>
-                                <th>Pro</th>
+                                <th scope="col">Feature</th>
+                                <th scope="col">Personal</th>
+                                <th scope="col">Starter</th>
+                                <th scope="col">Business</th>
+                                <th scope="col">Pro</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>Introductory Price</strong></td>
+                                <th scope="row">Introductory Price</th>
                                 <td>$2.95/month<br><span class="price-renewal">Renews at $11.99/month</span></td>
                                 <td>$5.45/month<br><span class="price-renewal">Renews at $19.99/month</span></td>
                                 <td>$9.95/month<br><span class="price-renewal">Renews at $24.99/month</span></td>
                                 <td>$13.95/month<br><span class="price-renewal">Renews at $28.99/month</span></td>
                             </tr>
                             <tr>
-                                <td><strong>Websites</strong></td>
+                                <th scope="row">Websites</th>
                                 <td>1 Website</td>
                                 <td>Unlimited</td>
                                 <td>Unlimited</td>
                                 <td>Unlimited</td>
                             </tr>
                             <tr>
-                                <td><strong>Storage</strong></td>
+                                <th scope="row">Storage</th>
                                 <td>10 GB SSD</td>
                                 <td>Unlimited SSD</td>
                                 <td>Unlimited SSD</td>
                                 <td>Unlimited SSD + Performance</td>
                             </tr>
                             <tr>
-                                <td><strong>Free Domain</strong></td>
+                                <th scope="row">Free Domain</th>
                                 <td>1 Year Included</td>
                                 <td>1 Year Included</td>
                                 <td>1 Year Included</td>
                                 <td>1 Year Included</td>
                             </tr>
                             <tr>
-                                <td><strong>Free SSL</strong></td>
+                                <th scope="row">Free SSL</th>
                                 <td>✅ Yes</td>
                                 <td>✅ Yes</td>
                                 <td>✅ Yes</td>
                                 <td>✅ Yes</td>
                             </tr>
                             <tr>
-                                <td><strong>Backups</strong></td>
+                                <th scope="row">Backups</th>
                                 <td>❌ Manual Only</td>
                                 <td>✅ Daily (1 Year Free)</td>
                                 <td>✅ Daily + CodeGuard</td>
                                 <td>✅ Daily + Enhanced</td>
                             </tr>
                             <tr>
-                                <td><strong>Best For</strong></td>
+                                <th scope="row">Best For</th>
                                 <td>Single Blog/Portfolio</td>
                                 <td>Multiple Sites</td>
                                 <td>Small Business</td>
@@ -1186,7 +1209,8 @@
                 </div>
 
                 <div class="success-box">
-                    <p><strong>💰 Money Saving Tip:</strong> Choose the 36-month Starter plan for the best value. At $5.45/month for 3 years, you get unlimited websites, daily backups, and free domain privacy for the first year. This saves you $200+ compared to monthly billing.</p>
+                    <h3>Money Saving Tip</h3>
+                    <p>Choose the 36-month Starter plan for the best value. At $5.45/month for 3 years, you get unlimited websites, daily backups, and free domain privacy for the first year. This saves you $200+ compared to monthly billing.</p>
                 </div>
 
                 <h3>Hidden Costs to Watch For</h3>
@@ -1220,7 +1244,7 @@
                 
                 <div class="pros-cons-grid">
                     <div class="pros-box">
-                        <h3>✅ The Advantages</h3>
+                        <h3>The Advantages</h3>
                         <ul>
                             <li><strong>WordPress.org Official Recommendation</strong> - Highest compatibility guarantee</li>
                             <li><strong>Beginner-Friendly Onboarding</strong> - 5-minute website setup process</li>
@@ -1233,7 +1257,7 @@
                     </div>
                     
                     <div class="cons-box">
-                        <h3>❌ The Disadvantages</h3>
+                        <h3>The Disadvantages</h3>
                         <ul>
                             <li><strong>High Renewal Prices</strong> - Increases 3-4x after first term</li>
                             <li><strong>Aggressive Upselling</strong> - Many add-ons during checkout</li>
@@ -1257,23 +1281,23 @@
                     <p>After analyzing hundreds of complaints, I found three main reasons people feel deceived:</p>
                     
                     <div class="warning-box">
-                        <p><strong>1. The Renewal Price Shock</strong><br>
-                        New customers pay $2.95/month but get charged $11.99/month after 12-36 months. Many forget about this and feel scammed when they see the renewal invoice.</p>
+                        <h4>The Renewal Price Shock</h4>
+                        <p>New customers pay $2.95/month but get charged $11.99/month after 12-36 months. Many forget about this and feel scammed when they see the renewal invoice.</p>
                     </div>
                     
                     <div class="warning-box">
-                        <p><strong>2. Hidden Checkout Add-ons</strong><br>
-                        During signup, Bluehost pre-selects $100+ worth of add-ons. Inattentive users end up paying for services they don't need.</p>
+                        <h4>Hidden Checkout Add-ons</h4>
+                        <p>During signup, Bluehost pre-selects $100+ worth of add-ons. Inattentive users end up paying for services they don't need.</p>
                     </div>
                     
                     <div class="warning-box">
-                        <p><strong>3. "Unlimited" Limitations</strong><br>
-                        While marketed as unlimited, there are fair usage policies. High-traffic sites might face restrictions.</p>
+                        <h4>"Unlimited" Limitations</h4>
+                        <p>While marketed as unlimited, there are fair usage policies. High-traffic sites might face restrictions.</p>
                     </div>
                 </div>
 
                 <div class="success-box">
-                    <h3>✅ The Reality: Bluehost is 100% Legit</h3>
+                    <h3>The Reality: Bluehost is 100% Legit</h3>
                     
                     <p><strong>Here's the truth:</strong></p>
                     <ul>
@@ -1337,7 +1361,7 @@
                 </div>
 
                 <div class="warning-box">
-                    <h3>⚠️ Common Mistakes That Delay AdSense Approval</h3>
+                    <h3>Common Mistakes That Delay AdSense Approval</h3>
                     
                     <ul>
                         <li>Applying with less than 10 articles</li>
@@ -1359,51 +1383,51 @@
                     <table class="pricing-table">
                         <thead>
                             <tr>
-                                <th>Feature</th>
-                                <th>Bluehost (Starter)</th>
-                                <th>Hostinger (Premium)</th>
-                                <th>Winner</th>
+                                <th scope="col">Feature</th>
+                                <th scope="col">Bluehost (Starter)</th>
+                                <th scope="col">Hostinger (Premium)</th>
+                                <th scope="col">Winner</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>Introductory Price</strong></td>
+                                <th scope="row">Introductory Price</th>
                                 <td>$5.45/month (36 months)</td>
                                 <td>$2.99/month (48 months)</td>
                                 <td>Hostinger</td>
                             </tr>
                             <tr>
-                                <td><strong>Renewal Price</strong></td>
+                                <th scope="row">Renewal Price</th>
                                 <td>$19.99/month</td>
                                 <td>$6.99/month</td>
                                 <td>Hostinger</td>
                             </tr>
                             <tr>
-                                <td><strong>Performance</strong></td>
+                                <th scope="row">Performance</th>
                                 <td>Apache, SSD, Cloudflare</td>
                                 <td>LiteSpeed, LSCache, NVMe</td>
                                 <td>Hostinger</td>
                             </tr>
                             <tr>
-                                <td><strong>Support</strong></td>
+                                <th scope="row">Support</th>
                                 <td>24/7 Phone & Chat</td>
                                 <td>24/7 Chat Only</td>
                                 <td>Bluehost</td>
                             </tr>
                             <tr>
-                                <td><strong>WordPress Integration</strong></td>
+                                <th scope="row">WordPress Integration</th>
                                 <td>Official Partner</td>
                                 <td>Auto-Installer</td>
                                 <td>Bluehost</td>
                             </tr>
                             <tr>
-                                <td><strong>Free Domain</strong></td>
+                                <th scope="row">Free Domain</th>
                                 <td>1 Year</td>
                                 <td>1 Year</td>
                                 <td>Tie</td>
                             </tr>
                             <tr>
-                                <td><strong>Backups</strong></td>
+                                <th scope="row">Backups</th>
                                 <td>Daily (1 Year Free)</td>
                                 <td>Weekly</td>
                                 <td>Bluehost</td>
@@ -1415,7 +1439,7 @@
                 <div class="comparison-highlight">
                     <h3>Final Comparison Verdict</h3>
                     
-                    <p><strong>Choose Bluehost if:</strong></p>
+                    <h4>Choose Bluehost if:</h4>
                     <ul>
                         <li>You're an absolute beginner needing phone support</li>
                         <li>You want official WordPress integration</li>
@@ -1423,7 +1447,7 @@
                         <li>You don't mind higher renewal prices</li>
                     </ul>
                     
-                    <p><strong>Choose Hostinger if:</strong></p>
+                    <h4>Choose Hostinger if:</h4>
                     <ul>
                         <li>Budget is your primary concern</li>
                         <li>You want faster loading speeds</li>
@@ -1526,14 +1550,17 @@
                 
                 <p>The combination of WordPress.org's official recommendation, beginner-friendly onboarding, 24/7 phone support, and reliable performance makes it an excellent starting point for new website owners.</p>
                 
-                <div class="content-box" style="background: rgba(255,255,255,0.1); border: none;">
-                    <h3 style="color: white;">My Recommendation</h3>
+                <div class="content-box" style="background: rgba(255,255,255,0.15); border: none;">
+                    <h3>My Recommendation</h3>
                     
-                    <p><strong>For most users:</strong> Choose the <strong>Starter 36-month plan</strong> at $5.45/month. This gives you unlimited websites, daily backups for the first year, and the best long-term value.</p>
+                    <h4>For most users:</h4>
+                    <p>Choose the <strong>Starter 36-month plan</strong> at $5.45/month. This gives you unlimited websites, daily backups for the first year, and the best long-term value.</p>
                     
-                    <p><strong>For single-site owners:</strong> The <strong>Personal 36-month plan</strong> at $2.95/month is sufficient for one website or blog.</p>
+                    <h4>For single-site owners:</h4>
+                    <p>The <strong>Personal 36-month plan</strong> at $2.95/month is sufficient for one website or blog.</p>
                     
-                    <p><strong>For business sites:</strong> Consider the <strong>Business plan</strong> for enhanced performance and marketing tools.</p>
+                    <h4>For business sites:</h4>
+                    <p>Consider the <strong>Business plan</strong> for enhanced performance and marketing tools.</p>
                 </div>
                 
                 <p><strong>Remember:</strong> Bluehost's biggest drawback is the high renewal price. Plan accordingly, set renewal reminders, and consider your long-term hosting strategy.</p>
@@ -1626,23 +1653,6 @@
             });
         });
 
-        // Dark/Light Mode Toggle
-        const themeToggle = document.getElementById('themeToggle');
-        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-        
-        const currentTheme = localStorage.getItem('theme') || 
-            (prefersDarkScheme.matches ? 'dark' : 'light');
-        
-        if (currentTheme === 'dark') {
-            document.body.classList.add('dark-mode');
-        }
-        
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
-            localStorage.setItem('theme', theme);
-        });
-
         // Image Slider Functionality
         let currentSlide = 0;
         const slides = document.querySelectorAll('.slide');
@@ -1654,7 +1664,15 @@
             const dot = document.createElement('div');
             dot.classList.add('dot');
             if (index === 0) dot.classList.add('active');
+            dot.setAttribute('tabindex', '0');
+            dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
             dot.addEventListener('click', () => goToSlide(index));
+            dot.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    goToSlide(index);
+                }
+            });
             dotsContainer.appendChild(dot);
         });
         
@@ -1664,6 +1682,7 @@
             slider.style.transform = `translateX(-${currentSlide * 100}%)`;
             dots.forEach((dot, index) => {
                 dot.classList.toggle('active', index === currentSlide);
+                dot.setAttribute('aria-current', index === currentSlide ? 'true' : 'false');
             });
         }
         
@@ -1699,9 +1718,25 @@
         faqToggles.forEach(toggle => {
             toggle.addEventListener('click', () => {
                 const answer = toggle.parentElement.nextElementSibling;
+                const isExpanded = answer.classList.contains('active');
                 answer.classList.toggle('active');
                 toggle.textContent = answer.classList.contains('active') ? '−' : '+';
+                toggle.setAttribute('aria-expanded', answer.classList.contains('active'));
+                
+                // Update aria-label
+                const question = toggle.parentElement.querySelector('h3').textContent;
+                toggle.setAttribute('aria-label', 
+                    answer.classList.contains('active') 
+                    ? `Collapse answer for: ${question}` 
+                    : `Expand answer for: ${question}`
+                );
             });
+            
+            // Initialize aria attributes
+            const answer = toggle.parentElement.nextElementSibling;
+            const question = toggle.parentElement.querySelector('h3').textContent;
+            toggle.setAttribute('aria-expanded', 'false');
+            toggle.setAttribute('aria-label', `Expand answer for: ${question}`);
         });
 
         // Smooth scroll for anchor links
@@ -1716,29 +1751,11 @@
                             behavior: 'smooth',
                             block: 'start'
                         });
+                        target.focus();
                     }
                 }
             });
         });
-
-        // Lazy loading images
-        if ('IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        if (img.dataset.src) {
-                            img.src = img.dataset.src;
-                        }
-                        imageObserver.unobserve(img);
-                    }
-                });
-            });
-
-            document.querySelectorAll('img[loading="lazy"]').forEach(img => {
-                imageObserver.observe(img);
-            });
-        }
 
         // Close mobile menu when clicking outside
         document.addEventListener('click', (e) => {
