@@ -143,6 +143,11 @@
             --bg-secondary: #f8f9fa;
             --border-color: #e0e0e0;
             --shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            
+            /* New WCAG compliant colors */
+            --wcag-text-dark: #000000;      /* Pure black for best contrast */
+            --wcag-text-medium: #222222;    /* Dark gray for headings */
+            --wcag-bg-light: #f2f5fa;       /* Light blue background with good contrast */
         }
 
         * {
@@ -158,7 +163,7 @@
 
         body {
             background-color: var(--bg-color);
-            color: var(--text-dark);
+            color: var(--wcag-text-dark); /* Changed to pure black for better contrast */
             line-height: 1.6;
             font-size: 16px;
             min-height: 100vh;
@@ -229,7 +234,7 @@
 
         .nav-links a {
             text-decoration: none;
-            color: var(--text-dark);
+            color: var(--wcag-text-dark); /* Changed to pure black */
             font-weight: 500;
             font-size: 0.9rem;
             transition: color 0.3s;
@@ -291,7 +296,7 @@
         .rating-score {
             font-weight: 600;
             font-size: 0.95rem;
-            color: var(--text-dark);
+            color: var(--wcag-text-dark);
         }
 
         .review-count {
@@ -301,7 +306,7 @@
 
         .hero-description {
             font-size: 1rem;
-            color: var(--text-medium);
+            color: var(--wcag-text-medium); /* Changed for better contrast */
             max-width: 700px;
             margin: 0 auto 20px;
             line-height: 1.6;
@@ -366,15 +371,17 @@
             font-weight: 600;
         }
 
+        /* FIXED: h3 color contrast */
         h3 {
-            color: var(--text-dark);
+            color: var(--wcag-text-dark); /* Changed from var(--text-dark) to pure black */
             font-size: 1.3rem;
             margin: 25px 0 15px;
             font-weight: 600;
         }
 
+        /* FIXED: h4 color contrast */
         h4 {
-            color: var(--text-dark);
+            color: var(--wcag-text-dark); /* Changed from var(--text-dark) to pure black */
             font-size: 1.1rem;
             margin: 20px 0 10px;
             font-weight: 600;
@@ -383,7 +390,7 @@
         p {
             margin-bottom: 16px;
             line-height: 1.6;
-            color: var(--text-dark);
+            color: var(--wcag-text-dark); /* Changed to pure black for better contrast */
         }
 
         ul, ol {
@@ -393,7 +400,7 @@
 
         li {
             margin-bottom: 8px;
-            color: var(--text-dark);
+            color: var(--wcag-text-dark); /* Changed to pure black */
         }
 
         /* Image Slider */
@@ -505,6 +512,7 @@
             padding: 15px;
             text-align: left;
             border-bottom: 1px solid var(--border-color);
+            color: var(--wcag-text-dark); /* Changed to pure black */
         }
 
         .pricing-table th {
@@ -600,9 +608,9 @@
             margin-top: 10px;
         }
 
-        /* Conclusion */
+        /* FIXED: Conclusion Section */
         .conclusion {
-            background: var(--primary-blue);
+            background: linear-gradient(135deg, #0d4a9e, #1a5fb4); /* Darker blue gradient for better contrast */
             color: white;
             padding: 30px;
             border-radius: 8px;
@@ -625,13 +633,20 @@
             color: var(--primary-blue);
         }
 
-        /* Content Boxes */
+        /* FIXED: Content Box with better contrast */
         .content-box {
-            background-color: var(--white);
+            background-color: var(--wcag-bg-light); /* Changed to lighter background */
             border-radius: 8px;
             padding: 20px;
             margin: 25px 0;
             border: 1px solid var(--border-color);
+        }
+
+        .content-box h3,
+        .content-box h4,
+        .content-box p,
+        .content-box li {
+            color: var(--wcag-text-dark); /* Pure black for best contrast on light background */
         }
 
         .toc-content-box {
@@ -654,7 +669,7 @@
             padding: 15px;
             border-radius: 6px;
             margin: 20px 0;
-            color: var(--text-dark);
+            color: var(--wcag-text-dark); /* Changed to pure black */
         }
 
         /* Success Box */
@@ -664,7 +679,7 @@
             padding: 15px;
             border-radius: 6px;
             margin: 20px 0;
-            color: var(--text-dark);
+            color: var(--wcag-text-dark); /* Changed to pure black */
         }
 
         /* Comparison Highlight */
@@ -699,7 +714,7 @@
             margin: 30px 0;
             border-radius: 6px;
             font-size: 0.9rem;
-            color: var(--text-dark);
+            color: var(--wcag-text-dark); /* Changed to pure black */
         }
 
         /* Footer */
@@ -1428,7 +1443,7 @@
                 </div>
             </section>
 
-            <!-- Conclusion -->
+            <!-- Conclusion Section - FIXED for better contrast -->
             <section class="conclusion" id="conclusion">
                 <h2>Final Verdict: Should You Choose Bluehost in 2026?</h2>
                 
@@ -1436,17 +1451,18 @@
                 
                 <p>The combination of WordPress.org's official recommendation, beginner-friendly onboarding, 24/7 phone support, and reliable performance makes it an excellent starting point for new website owners.</p>
                 
-                <div class="content-box" style="background: rgba(255,255,255,0.1); border: none;">
-                    <h3>My Recommendation</h3>
+                <!-- FIXED: Content box with proper contrast -->
+                <div class="content-box" style="background-color: #e8f4ff; border: 1px solid #b3d4fc; padding: 20px; border-radius: 8px;">
+                    <h3 style="color: #000000; margin-top: 0;">My Recommendation</h3>
                     
-                    <h4>For most users:</h4>
-                    <p>Choose the <strong>Starter 36-month plan</strong> at $5.45/month. This gives you unlimited websites, daily backups for the first year, and the best long-term value.</p>
+                    <h4 style="color: #000000;">For most users:</h4>
+                    <p style="color: #000000;">Choose the <strong>Starter 36-month plan</strong> at $5.45/month. This gives you unlimited websites, daily backups for the first year, and the best long-term value.</p>
                     
-                    <h4>For single-site owners:</h4>
-                    <p>The <strong>Personal 36-month plan</strong> at $2.95/month is sufficient for one website or blog.</p>
+                    <h4 style="color: #000000;">For single-site owners:</h4>
+                    <p style="color: #000000;">The <strong>Personal 36-month plan</strong> at $2.95/month is sufficient for one website or blog.</p>
                     
-                    <h4>For business sites:</h4>
-                    <p>Consider the <strong>Business plan</strong> for enhanced performance and marketing tools.</p>
+                    <h4 style="color: #000000;">For business sites:</h4>
+                    <p style="color: #000000;">Consider the <strong>Business plan</strong> for enhanced performance and marketing tools.</p>
                 </div>
                 
                 <p><strong>Remember:</strong> Bluehost's biggest drawback is the high renewal price. Plan accordingly, set renewal reminders, and consider your long-term hosting strategy.</p>
