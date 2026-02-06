@@ -3,754 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AdSense RPM Calculator 2026 | Calculate Your Ad Revenue + Best Hosting Tips</title>
-    <meta name="description" content="Free AdSense RPM Calculator with 2500+ word guide. Calculate RPM, CPM & earnings. Get Bluehost hosting tips for faster AdSense approval & higher rankings.">
-    <meta name="keywords" content="AdSense RPM calculator, RPM calculator, Google AdSense revenue, Bluehost hosting, AdSense approval, increase RPM, web hosting for AdSense">
+    <title>AdSense RPM Calculator | Estimate Your Earnings & Learn to Grow</title>
+    <meta name="description" content="Free AdSense RPM calculator tool. Estimate your earnings per 1,000 views and learn proven strategies to improve your website's ad revenue and user experience.">
     <link rel="canonical" href="https://aawaish583-png.github.io/adsense-rpm-calculator/">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="AdSense RPM Calculator 2024 | Calculate Revenue + Hosting Guide">
-    <meta property="og:description" content="Free calculator + 2500+ word guide. Calculate AdSense earnings. Get Bluehost tips for AdSense approval & higher rankings.">
+    <meta property="og:title" content="AdSense RPM Calculator | Estimate Your Earnings & Learn to Grow">
+    <meta property="og:description" content="Free tool to calculate AdSense RPM. Get actionable tips to improve your website's speed, content, and ad revenue potential.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://aawaish583-png.github.io/adsense-rpm-calculator/">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💰</text></svg>">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
     <style>
-        :root {
-            --primary-color: #4285F4;
-            --primary-dark: #3367D6;
-            --secondary-color: #34A853;
-            --accent-color: #FBBC05;
-            --danger-color: #EA4335;
-            --light-bg: #F8F9FA;
-            --dark-text: #202124;
-            --medium-text: #5F6368;
-            --light-text: #80868B;
-            --border-color: #DADCE0;
-            --white: #FFFFFF;
-            --shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-            --radius: 8px;
-            --transition: all 0.3s ease;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--dark-text);
-            background-color: var(--light-bg);
-            overflow-x: hidden;
-        }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            line-height: 1.3;
-            margin-bottom: 1rem;
-        }
-        
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header Styles */
-        header {
-            background-color: var(--white);
-            box-shadow: var(--shadow);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-        }
-        
-        .logo-icon {
-            font-size: 28px;
-            color: var(--primary-color);
-        }
-        
-        .logo-text {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-            font-size: 22px;
-            color: var(--dark-text);
-        }
-        
-        .logo-text span {
-            color: var(--primary-color);
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-        
-        nav a {
-            text-decoration: none;
-            color: var(--medium-text);
-            font-weight: 500;
-            transition: var(--transition);
-            position: relative;
-        }
-        
-        nav a:hover, nav a.active {
-            color: var(--primary-color);
-        }
-        
-        nav a.active::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: var(--primary-color);
-        }
-        
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            color: var(--medium-text);
-        }
-        
-        /* Hero Section */
-        .hero {
-            padding: 80px 0 40px;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-            color: var(--dark-text);
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--medium-text);
-            max-width: 700px;
-            margin: 0 auto 40px;
-        }
-        
-        /* Calculator Section */
-        .calculator-section {
-            background-color: var(--white);
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            padding: 40px;
-            margin-bottom: 60px;
-        }
-        
-        .calculator-title {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 1.8rem;
-        }
-        
-        .calculator-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
-        
-        .calculator-inputs {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-        }
-        
-        .input-group {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-        
-        .input-group label {
-            font-weight: 500;
-            color: var(--dark-text);
-        }
-        
-        .input-group input {
-            padding: 14px 16px;
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius);
-            font-size: 16px;
-            transition: var(--transition);
-        }
-        
-        .input-group input:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.1);
-        }
-        
-        .input-group input[type="range"] {
-            padding: 0;
-        }
-        
-        .value-display {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 5px;
-        }
-        
-        .value-display span {
-            color: var(--medium-text);
-            font-size: 14px;
-        }
-        
-        .calculate-btn {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: var(--radius);
-            padding: 16px;
-            font-size: 18px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            margin-top: 10px;
-        }
-        
-        .calculate-btn:hover {
-            background-color: var(--primary-dark);
-        }
-        
-        .calculator-results {
-            background-color: var(--light-bg);
-            border-radius: var(--radius);
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-        }
-        
-        .result-box {
-            background-color: var(--white);
-            border-radius: var(--radius);
-            padding: 25px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-        }
-        
-        .result-title {
-            font-size: 1rem;
-            color: var(--medium-text);
-            margin-bottom: 10px;
-        }
-        
-        .result-value {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-        }
-        
-        .result-unit {
-            font-size: 1rem;
-            color: var(--medium-text);
-            margin-left: 5px;
-        }
-        
-        .result-note {
-            font-size: 0.9rem;
-            color: var(--light-text);
-            margin-top: 10px;
-            font-style: italic;
-        }
-        
-        /* Smart Recommendation Section */
-        .recommendation-section {
-            background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%);
-            border-radius: var(--radius);
-            padding: 40px;
-            margin: 40px 0;
-            border-left: 5px solid var(--primary-color);
-            display: none;
-        }
-        
-        .recommendation-section.active {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .recommendation-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 25px;
-        }
-        
-        .recommendation-icon {
-            font-size: 32px;
-            background: var(--primary-color);
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .recommendation-header h3 {
-            font-size: 1.5rem;
-            margin-bottom: 5px;
-            color: var(--dark-text);
-        }
-        
-        .recommendation-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 30px;
-        }
-        
-        .problem-analysis {
-            background: var(--white);
-            padding: 25px;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-        }
-        
-        .problem-analysis h4 {
-            color: var(--danger-color);
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-        }
-        
-        .problem-analysis ul {
-            padding-left: 20px;
-            margin-bottom: 20px;
-        }
-        
-        .problem-analysis li {
-            margin-bottom: 8px;
-            color: var(--medium-text);
-        }
-        
-        .solution-box {
-            background: var(--white);
-            padding: 25px;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            border: 2px solid var(--secondary-color);
-            text-align: center;
-        }
-        
-        .solution-box h4 {
-            color: var(--secondary-color);
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-        }
-        
-        .bluehost-logo {
-            font-size: 28px;
-            font-weight: bold;
-            color: #0073aa;
-            margin-bottom: 15px;
-            display: block;
-        }
-        
-        .bluehost-features {
-            text-align: left;
-            margin: 20px 0;
-        }
-        
-        .bluehost-feature {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
-        }
-        
-        .bluehost-feature .icon {
-            color: var(--secondary-color);
-            font-weight: bold;
-        }
-        
-        .bluehost-btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #0073aa, #00a8ff);
-            color: white;
-            padding: 18px 40px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 18px;
-            margin: 20px 0;
-            box-shadow: 0 4px 15px rgba(0, 115, 170, 0.3);
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-            width: 100%;
-        }
-        
-        .bluehost-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 115, 170, 0.4);
-            background: linear-gradient(135deg, #006699, #0099e6);
-        }
-        
-        .affiliate-disclaimer {
-            font-size: 12px;
-            color: var(--light-text);
-            margin-top: 15px;
-            font-style: italic;
-            line-height: 1.4;
-        }
-        
-        /* Article Content */
-        .article-content {
-            background-color: var(--white);
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            padding: 50px;
-            margin-bottom: 60px;
-        }
-        
-        .article-section {
-            margin-bottom: 40px;
-        }
-        
-        .article-section h2 {
-            font-size: 1.8rem;
-            color: var(--dark-text);
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--light-bg);
-            margin-bottom: 20px;
-        }
-        
-        .article-section p {
-            margin-bottom: 15px;
-            color: var(--medium-text);
-            line-height: 1.7;
-        }
-        
-        .article-section ul, .article-section ol {
-            padding-left: 25px;
-            margin-bottom: 20px;
-            color: var(--medium-text);
-        }
-        
-        .article-section li {
-            margin-bottom: 8px;
-            line-height: 1.6;
-        }
-        
-        .highlight-box {
-            background-color: #f0f7ff;
-            border-left: 4px solid var(--primary-color);
-            padding: 20px;
-            margin: 25px 0;
-            border-radius: 0 var(--radius) var(--radius) 0;
-        }
-        
-        .highlight-box h4 {
-            color: var(--primary-color);
-            margin-bottom: 10px;
-        }
-        
-        .warning-box {
-            background-color: #fff8e6;
-            border-left: 4px solid var(--accent-color);
-            padding: 20px;
-            margin: 25px 0;
-            border-radius: 0 var(--radius) var(--radius) 0;
-        }
-        
-        .warning-box h4 {
-            color: var(--accent-color);
-            margin-bottom: 10px;
-        }
-        
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 25px 0;
-            background: var(--white);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            border-radius: var(--radius);
-            overflow: hidden;
-        }
-        
-        .comparison-table th {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 15px;
-            text-align: left;
-            font-weight: 600;
-        }
-        
-        .comparison-table td {
-            padding: 15px;
-            border-bottom: 1px solid var(--border-color);
-            color: var(--medium-text);
-        }
-        
-        .comparison-table tr:last-child td {
-            border-bottom: none;
-        }
-        
-        .comparison-table .good {
-            color: var(--secondary-color);
-            font-weight: 600;
-        }
-        
-        .comparison-table .bad {
-            color: var(--danger-color);
-            font-weight: 600;
-        }
-        
-        /* FAQ Section */
-        .faq-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .faq-item {
-            background-color: var(--white);
-            border-radius: var(--radius);
-            margin-bottom: 15px;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-        }
-        
-        .faq-question {
-            padding: 20px;
-            font-weight: 600;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .faq-answer {
-            padding: 0 20px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-            color: var(--medium-text);
-        }
-        
-        .faq-answer p {
-            padding-bottom: 20px;
-        }
-        
-        .faq-item.active .faq-answer {
-            max-height: 300px;
-        }
-        
-        .faq-toggle {
-            font-size: 20px;
-            color: var(--primary-color);
-            transition: transform 0.3s ease;
-        }
-        
-        .faq-item.active .faq-toggle {
-            transform: rotate(45deg);
-        }
-        
+        :root{--primary:#2563eb;--secondary:#059669;--text:#1f2937;--text-light:#6b7280;--bg:#f9fafb;--surface:#ffffff;--border:#e5e7eb;--radius:0.5rem;--shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.6;color:var(--text);background:var(--bg);padding-top:0}
+        .container{width:100%;max-width:1200px;margin:0 auto;padding:0 1rem}
+        .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}
+        /* Header */
+        header{background:var(--surface);box-shadow:var(--shadow);position:sticky;top:0;z-index:1000}
+        .header-inner{display:flex;justify-content:space-between;align-items:center;padding:1rem 0}
+        .logo{font-size:1.5rem;font-weight:700;color:var(--primary);text-decoration:none}
+        nav ul{display:flex;list-style:none;gap:1.5rem}
+        nav a{color:var(--text-light);text-decoration:none;font-weight:500;padding:0.5rem 0;position:relative;transition:color 0.2s}
+        nav a:hover,nav a.active{color:var(--primary)}
+        nav a.active:after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--primary)}
+        .menu-toggle{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--text)}
+        /* Hero */
+        .hero{padding:3rem 0 2rem;text-align:center}
+        .hero h1{font-size:2.5rem;margin-bottom:1rem;line-height:1.2}
+        .hero p{font-size:1.125rem;color:var(--text-light);max-width:48rem;margin:0 auto 2rem}
+        /* Calculator */
+        .calculator-card{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);padding:2rem;margin-bottom:3rem}
+        .calculator-title{font-size:1.875rem;margin-bottom:2rem;text-align:center}
+        .calculator-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+        .input-group{margin-bottom:1.5rem}
+        .input-group label{display:block;margin-bottom:0.5rem;font-weight:600}
+        .input-group input{width:100%;padding:0.75rem 1rem;border:1px solid var(--border);border-radius:var(--radius);font-size:1rem;transition:border-color 0.2s}
+        .input-group input:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(37,99,235,0.1)}
+        .slider-container{margin-top:0.5rem}
+        .slider-labels{display:flex;justify-content:space-between;margin-top:0.25rem;font-size:0.875rem;color:var(--text-light)}
+        .btn{display:inline-block;background:var(--primary);color:white;font-weight:600;padding:0.875rem 1.75rem;border:none;border-radius:var(--radius);cursor:pointer;transition:background 0.2s;text-decoration:none;text-align:center;font-size:1rem}
+        .btn:hover{background:#1d4ed8}
+        .btn-wide{width:100%}
+        .btn-secondary{background:var(--secondary)}
+        .btn-secondary:hover{background:#047857}
+        .results{background:var(--bg);border-radius:var(--radius);padding:1.5rem}
+        .result-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+        .result-item{text-align:center;padding:1rem;background:var(--surface);border-radius:var(--radius)}
+        .result-value{font-size:2rem;font-weight:700;color:var(--primary);line-height:1}
+        .result-label{font-size:0.875rem;color:var(--text-light);margin-top:0.5rem}
+        /* Content */
+        .content-section{margin-bottom:3rem}
+        .section-title{font-size:1.875rem;margin-bottom:1.5rem;padding-bottom:0.75rem;border-bottom:2px solid var(--border)}
+        h3{font-size:1.5rem;margin:1.5rem 0 1rem}
+        p,li{color:var(--text-light)}
+        p{margin-bottom:1rem}
+        ul,ol{margin:1rem 0 1rem 1.5rem}
+        li{margin-bottom:0.5rem}
+        .info-box{padding:1.5rem;border-radius:var(--radius);margin:1.5rem 0;border-left:4px solid var(--primary);background:var(--surface)}
+        .info-box.warning{border-left-color:#f59e0b;background:#fffbeb}
+        .info-box.good{border-left-color:var(--secondary);background:#f0fdf4}
+        .comparison-table{width:100%;border-collapse:collapse;margin:1.5rem 0;background:var(--surface);border-radius:var(--radius);overflow:hidden;box-shadow:0 1px 2px 0 rgba(0,0,0,0.05)}
+        .comparison-table th,.comparison-table td{padding:1rem;text-align:left;border-bottom:1px solid var(--border)}
+        .comparison-table th{background:var(--bg);font-weight:600}
+        .comparison-table tr:last-child td{border-bottom:none}
+        .tag{display:inline-block;padding:0.25rem 0.75rem;border-radius:9999px;font-size:0.875rem;font-weight:600}
+        .tag-good{background:#d1fae5;color:var(--secondary)}
+        .tag-bad{background:#fee2e2;color:#dc2626}
+        /* Affiliate Box */
+        .affiliate-box{background:#eff6ff;border:2px solid #dbeafe;border-radius:var(--radius);padding:2rem;margin:2rem 0;text-align:center}
+        .affiliate-box h3{color:#1e40af;margin-bottom:1rem}
+        .affiliate-box ul{text-align:left;margin:1.5rem auto;max-width:32rem}
+        .affiliate-box li{margin-bottom:0.75rem}
+        .affiliate-disclaimer{font-size:0.875rem;color:var(--text-light);margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border)}
+        /* FAQ */
+        .faq-item{margin-bottom:0.75rem;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+        .faq-question{padding:1rem;background:var(--surface);font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+        .faq-answer{padding:0 1rem;max-height:0;overflow:hidden;transition:max-height 0.3s ease}
+        .faq-answer.active{padding:1rem;max-height:500px}
+        .faq-toggle{transition:transform 0.3s}
+        .faq-toggle.active{transform:rotate(45deg)}
         /* Footer */
-        footer {
-            background-color: var(--dark-text);
-            color: var(--white);
-            padding: 60px 0 30px;
-            margin-top: 60px;
+        footer{background:#111827;color:#9ca3af;padding:3rem 0 1.5rem;margin-top:3rem}
+        .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;margin-bottom:2rem}
+        .footer-col h3{color:white;font-size:1.125rem;margin-bottom:1rem}
+        .footer-col a{display:block;color:#9ca3af;text-decoration:none;margin-bottom:0.5rem;transition:color 0.2s}
+        .footer-col a:hover{color:white}
+        .copyright{text-align:center;padding-top:1.5rem;border-top:1px solid #374151;font-size:0.875rem}
+        /* Responsive */
+        @media (max-width:768px){
+            .menu-toggle{display:block}
+            nav ul{display:none;position:absolute;top:100%;left:0;right:0;background:var(--surface);padding:1rem;box-shadow:var(--shadow);flex-direction:column}
+            nav ul.active{display:flex}
+            .hero h1{font-size:2rem}
+            .calculator-grid{grid-template-columns:1fr}
+            .result-grid{grid-template-columns:repeat(2,1fr)}
         }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        
-        .footer-section h3 {
-            color: var(--white);
-            margin-bottom: 25px;
-            font-size: 1.3rem;
-        }
-        
-        .footer-section p, .footer-section a {
-            color: #B0B3B8;
-            margin-bottom: 12px;
-            display: block;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-        
-        .footer-section a:hover {
-            color: var(--primary-color);
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid #3A3B3C;
-            color: #B0B3B8;
-            font-size: 0.9rem;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .calculator-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .recommendation-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .article-content {
-                padding: 30px 20px;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .header-content {
-                padding: 15px 0;
-            }
-            
-            nav {
-                display: none;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                background-color: var(--white);
-                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-                padding: 20px;
-            }
-            
-            nav.active {
-                display: block;
-            }
-            
-            nav ul {
-                flex-direction: column;
-                gap: 20px;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .calculator-section {
-                padding: 30px 20px;
-            }
-            
-            .hero {
-                padding: 60px 0 30px;
-            }
-            
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-            }
-            
-            .recommendation-section {
-                padding: 25px 20px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .result-value {
-                font-size: 2rem;
-            }
-            
-            .bluehost-btn {
-                padding: 15px 20px;
-                font-size: 16px;
-            }
-        }
-        
-        /* Print Styles */
-        @media print {
-            header, footer, .calculate-btn, .bluehost-btn, .recommendation-section {
-                display: none;
-            }
-            
-            .calculator-section {
-                box-shadow: none;
-                border: 1px solid #ddd;
-            }
-        }
-        
-        /* Bluehost Button Animation */
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(0, 115, 170, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(0, 115, 170, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(0, 115, 170, 0); }
-        }
-        
-        .bluehost-btn {
-            animation: pulse 2s infinite;
+        @media (max-width:480px){
+            .result-grid{grid-template-columns:1fr}
+            .result-value{font-size:1.75rem}
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
+    <a class="sr-only" href="#main-content">Skip to main content</a>
     <header>
         <div class="container">
-            <div class="header-content">
-                <a href="#" class="logo">
-                    <div class="logo-icon">💰</div>
-                    <div class="logo-text">AdSense<span>Calculator</span></div>
-                </a>
-                
-                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
-                
-                <nav id="mainNav">
+            <div class="header-inner">
+                <a href="/" class="logo">RPM Calculator</a>
+                <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+                <nav>
                     <ul>
-                        <li><a href="#" class="active">Home</a></li>
-                        <li><a href="#calculator">RPM Calculator</a></li>
-                        <li><a href="#article">Full Guide</a></li>
+                        <li><a href="/" class="active">Home</a></li>
+                        <li><a href="#calculator">Calculator</a></li>
+                        <li><a href="#guide">Guide</a></li>
                         <li><a href="#faq">FAQ</a></li>
-                        <li><a href="https://aawaish583-png.github.io/adsense-rpm-calculator/bluehost-review.html">Bluehost Review</a></li>
-                        <li><a href="https://aawaish583-png.github.io/adsense-rpm-calculator/best-hosting-for-adsense.html">Hosting for AdSense</a></li>
-                        <li><a href="https://aawaish583-png.github.io/adsense-rpm-calculator/increase-adsense-rpm.html">Increase RPM</a></li>
+                        <li><a href="https://aawaish583-png.github.io/adsense-rpm-calculator/best-hosting-for-adsense.html">Hosting</a></li>
                         <li><a href="https://aawaish583-png.github.io/adsense-rpm-calculator/about-us.html">About</a></li>
                         <li><a href="https://aawaish583-png.github.io/adsense-rpm-calculator/contact.html">Contact</a></li>
                     </ul>
@@ -759,700 +124,308 @@
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
+    <main id="main-content">
         <section class="hero">
             <div class="container">
-                <h1>AdSense RPM Calculator 2024: Calculate Your Earnings + Hosting Guide</h1>
-                <p>Free RPM calculator with 2500+ word complete guide. Calculate your AdSense revenue, learn how to increase RPM, and discover why Bluehost hosting can help you get AdSense approval faster and rank higher on Google.</p>
+                <h1>AdSense RPM Calculator</h1>
+                <p>Use this free tool to estimate your AdSense revenue per 1,000 page views. Get actionable insights to improve your website's earnings potential through better speed, content, and user experience.</p>
             </div>
         </section>
 
-        <!-- Calculator Section -->
-        <section class="calculator-section" id="calculator">
+        <section id="calculator" class="calculator-card">
             <div class="container">
-                <h2 class="calculator-title">AdSense RPM Calculator</h2>
-                <div class="calculator-container">
-                    <div class="calculator-inputs">
+                <h2 class="calculator-title">Calculate Your Estimated RPM</h2>
+                <div class="calculator-grid">
+                    <div>
                         <div class="input-group">
                             <label for="earnings">Total AdSense Earnings ($)</label>
-                            <input type="number" id="earnings" min="0" step="0.01" placeholder="e.g., 500.00" value="500">
+                            <input type="number" id="earnings" min="0" step="0.01" value="150" aria-label="Enter your total AdSense earnings in dollars">
                         </div>
-                        
                         <div class="input-group">
                             <label for="pageviews">Total Page Views</label>
-                            <input type="number" id="pageviews" min="0" placeholder="e.g., 100000" value="100000">
+                            <input type="number" id="pageviews" min="0" value="50000" aria-label="Enter your total number of page views">
                         </div>
-                        
                         <div class="input-group">
                             <label for="days">Time Period (Days)</label>
-                            <input type="number" id="days" min="1" placeholder="e.g., 30" value="30">
+                            <input type="number" id="days" min="1" value="30" aria-label="Enter the time period in days">
                         </div>
-                        
                         <div class="input-group">
-                            <label for="cpc">Estimated CPC (Cost Per Click) - Optional</label>
-                            <input type="range" id="cpc" min="0.01" max="5" step="0.01" value="0.5">
-                            <div class="value-display">
-                                <span>$0.01</span>
-                                <span id="cpcValue">$0.50</span>
-                                <span>$5.00</span>
+                            <label for="cpc">Estimated Average CPC (Optional)</label>
+                            <input type="range" id="cpc" min="0.05" max="2" step="0.05" value="0.5">
+                            <div class="slider-labels">
+                                <span>$0.05</span>
+                                <span id="cpc-value">$0.50</span>
+                                <span>$2.00</span>
                             </div>
                         </div>
-                        
-                        <button class="calculate-btn" id="calculateBtn">Calculate RPM & Revenue</button>
+                        <button id="calculate-btn" class="btn btn-wide">Calculate RPM</button>
+                        <p class="affiliate-disclaimer" style="margin-top: 1rem; font-size: 0.8rem;"><strong>Note:</strong> This tool provides estimates. Actual earnings depend on ad fill rate, user engagement, niche, and other factors.</p>
                     </div>
-                    
-                    <div class="calculator-results">
-                        <div class="result-box">
-                            <div class="result-title">RPM (Revenue Per Mille)</div>
-                            <div class="result-value" id="rpmResult">$5.00</div>
-                            <div class="result-note">Earnings per 1,000 page views</div>
+                    <div class="results">
+                        <div class="result-grid">
+                            <div class="result-item">
+                                <div class="result-value" id="rpm-result">$3.00</div>
+                                <div class="result-label">Estimated RPM</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-value" id="cpm-result">$3.00</div>
+                                <div class="result-label">Estimated CPM</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-value" id="daily-result">$5.00</div>
+                                <div class="result-label">Daily Revenue</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-value" id="monthly-result">$150.00</div>
+                                <div class="result-label">Monthly Revenue</div>
+                            </div>
                         </div>
-                        
-                        <div class="result-box">
-                            <div class="result-title">CPM (Cost Per Mille)</div>
-                            <div class="result-value" id="cpmResult">$5.00</div>
-                            <div class="result-note">Advertiser cost per 1,000 impressions</div>
-                        </div>
-                        
-                        <div class="result-box">
-                            <div class="result-title">Daily Revenue</div>
-                            <div class="result-value" id="dailyResult">$16.67</div>
-                            <div class="result-unit">/ day</div>
-                        </div>
-                        
-                        <div class="result-box">
-                            <div class="result-title">Monthly Revenue</div>
-                            <div class="result-value" id="monthlyResult">$500.00</div>
-                            <div class="result-unit">/ month</div>
+                        <div class="info-box" id="analysis-box" style="margin-top: 1.5rem; display: none;">
+                            <h3 style="font-size: 1.1rem; margin-top: 0;">Your Analysis</h3>
+                            <p id="analysis-text">Analysis will appear here based on your results.</p>
+                            <p style="margin-top: 0.5rem; font-size: 0.9rem;">Improving website performance and user experience can positively impact these metrics.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Smart Recommendation Section (Hidden by default) -->
-        <div class="container">
-            <div class="recommendation-section" id="recommendationSection">
-                <div class="recommendation-header">
-                    <div class="recommendation-icon">💡</div>
-                    <div>
-                        <h3>Personalized Recommendation Based on Your Results</h3>
-                        <p>We analyzed your RPM calculation and found opportunities to improve your earnings</p>
-                    </div>
-                </div>
-                
-                <div class="recommendation-content">
-                    <div class="problem-analysis">
-                        <h4>Analysis of Your Current Situation</h4>
-                        <p id="problemText">Your estimated RPM of $5.00 is below the optimal range for monetized websites. Based on our analysis of thousands of AdSense sites, here are the most likely reasons:</p>
-                        <ul id="problemList">
-                            <li><strong>Slow Website Speed:</strong> Page load time > 3 seconds reduces ad viewability</li>
-                            <li><strong>Poor Hosting Infrastructure:</strong> Shared hosting with limited resources affects performance</li>
-                            <li><strong>Technical SEO Issues:</strong> Poor mobile optimization and Core Web Vitals</li>
-                            <li><strong>Ad Placement Optimization:</strong> Non-optimized ad units and placements</li>
-                        </ul>
-                        <p><strong>Root Cause:</strong> 73% of low RPM cases are directly linked to hosting-related performance issues that affect both user experience and Google rankings.</p>
-                    </div>
-                    
-                    <div class="solution-box">
-                        <h4>Recommended Solution</h4>
-                        <div class="bluehost-logo">🚀 Bluehost</div>
-                        <p><strong>Optimized WordPress Hosting for AdSense Publishers</strong></p>
-                        
-                        <div class="bluehost-features">
-                            <div class="bluehost-feature">
-                                <span class="icon">✅</span>
-                                <span>Google-Optimized Speed</span>
-                            </div>
-                            <div class="bluehost-feature">
-                                <span class="icon">✅</span>
-                                <span>AdSense Approval Ready</span>
-                            </div>
-                            <div class="bluehost-feature">
-                                <span class="icon">✅</span>
-                                <span>Free SSL & Domain</span>
-                            </div>
-                            <div class="bluehost-feature">
-                                <span class="icon">✅</span>
-                                <span>24/7 Expert Support</span>
-                            </div>
-                            <div class="bluehost-feature">
-                                <span class="icon">✅</span>
-                                <span>30-Day Money Back</span>
-                            </div>
-                        </div>
-                        
-                        <a href="https://bluehost.sjv.io/kOyaQz" target="_blank" class="bluehost-btn">
-                            👉 Get Bluehost at 70% Discount + Free Domain
-                        </a>
-                        
-                        <div class="affiliate-disclaimer">
-                            <strong>Disclosure:</strong> This is an affiliate link. If you purchase through this link, we earn a commission at no extra cost to you. This supports our free tools and research.
-                        </div>
-                    </div>
+        <section class="content-section container" id="guide">
+            <h2 class="section-title">Understanding and Improving Your AdSense RPM</h2>
+            <p>Revenue Per Mille (RPM) is a key metric showing how much you earn for every 1,000 page views. It's calculated from your total earnings. Unlike CPM (what advertisers pay), RPM reflects your actual take-home revenue after platform fees.</p>
+
+            <h3>What Influences Your AdSense RPM?</h3>
+            <p>Your RPM isn't fixed. It fluctuates based on several factors you can influence:</p>
+            <ul>
+                <li><strong>Website Niche & Content:</strong> Finance, technology, and insurance often have higher advertiser competition, leading to higher RPMs compared to general topics.</li>
+                <li><strong>Audience Geography:</strong> Traffic from North America and Western Europe typically generates higher RPMs than traffic from regions with lower average advertiser spend.</li>
+                <li><strong>User Engagement:</strong> Pages where users spend more time and view more ads naturally yield higher revenue.</li>
+                <li><strong>Device Type:</strong> Desktop traffic often has a slightly higher RPM than mobile, though mobile traffic volume is crucial.</li>
+                <li><strong>Seasonality:</strong> Advertiser budgets peak in Q4 (holiday season), often boosting RPM across many niches.</li>
+            </ul>
+
+            <div class="info-box">
+                <h3>How Website Performance Indirectly Affects RPM</h3>
+                <p>Google values fast, user-friendly websites. A slow site can hurt your rankings, reducing organic traffic. More importantly, slow page loads increase bounce rates—users leaving before seeing any ads. Therefore, a reliable hosting foundation that delivers good speed is a critical part of the user experience, which supports better rankings and ad viewability over time.</p>
+            </div>
+
+            <h3>Actionable Strategies to Improve Your RPM</h3>
+            <p>Focus on these areas to build a sustainable site with growing revenue potential.</p>
+
+            <h4>1. Optimize Website Core Web Vitals</h4>
+            <p>Google's Core Web Vitals measure real-world user experience. Aim for:
+            <ul>
+                <li><strong>Largest Contentful Paint (LCP):</strong> Under 2.5 seconds (load performance).</li>
+                <li><strong>First Input Delay (FID):</strong> Under 100 milliseconds (interactivity).</li>
+                <li><strong>Cumulative Layout Shift (CLS):</strong> Under 0.1 (visual stability).</li>
+            </ul>
+            Tools like Google PageSpeed Insights and Lighthouse can audit your site.</p>
+
+            <h4>2. Create Comprehensive, Valuable Content</h4>
+            <p>Quality content keeps users engaged. Aim for articles that thoroughly answer a searcher's query. Comprehensive guides, tutorials, and well-researched articles tend to attract more qualified traffic and keep users on the page longer, increasing ad impressions.</p>
+
+            <h4>3. Implement Smart Ad Placement</h4>
+            <p>Balance revenue with user experience.
+            <ul>
+                <li>Place ads within the content flow, not just at the top or bottom.</li>
+                <li>Use responsive ad units that fit all screen sizes.</li>
+                <li>Avoid placing too many ads above the fold or using intrusive formats that annoy users.</li>
+            </ul>
+            Test different placements to see what works for your audience.</p>
+
+            <h4>4. Improve Site-Wide User Experience (UX)</h4>
+            <p>A clean, fast, easy-to-navigate site encourages exploration. Ensure mobile responsiveness, intuitive menus, and fast internal links. A positive UX reduces bounce rates and increases page views per session.</p>
+
+            <div class="info-box warning">
+                <h3>Common Pitfalls to Avoid</h3>
+                <ul>
+                    <li><strong>Clickbait or Low-Quality Content:</strong> This attracts poor-quality traffic and can lead to policy violations.</li>
+                    <li><strong>Excessive Ad Density:</strong> Overloading pages with ads hurts UX and can violate AdSense policies.</li>
+                    <li><strong>Ignoring Mobile Users:</strong> With most web traffic on mobile, a poor mobile experience is a major revenue leak.</li>
+                    <li><strong>Choosing Infrastructure Based Solely on Price:</strong> The cheapest hosting may lead to slow speeds and downtime, hurting growth.</li>
+                </ul>
+            </div>
+
+            <h3>Realistic RPM Benchmarks</h3>
+            <p>RPM varies widely. As a general reference for content websites:</p>
+            <table class="comparison-table">
+                <thead>
+                    <tr><th>Site Stage</th><th>Typical RPM Range*</th><th>Primary Focus</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>New (0-6 months)</td><td>$2 - $8</td><td>Quality content, basic SEO, site setup</td></tr>
+                    <tr><td>Growing (6-18 months)</td><td>$8 - $20</td><td>Content depth, user experience, speed optimization</td></tr>
+                    <tr><td>Established (18+ months)</td><td>$15 - $40+</td><td>Advanced optimization, audience building, diversification</td></tr>
+                </tbody>
+            </table>
+            <p style="font-size:0.875rem; margin-top:0.5rem;">*Ranges are estimates and depend heavily on niche, traffic quality, and optimization level.</p>
+        </section>
+
+        <section class="container content-section" id="hosting-consideration">
+            <h2 class="section-title">Website Infrastructure & Performance</h2>
+            <p>Your website's hosting is its foundation. While no host can "guarantee" a higher RPM, a reliable host contributes to the site speed and stability that users and Google expect.</p>
+
+            <div class="info-box good">
+                <h3>Key Hosting Features for Content Publishers</h3>
+                <p>When choosing hosting, consider these factors that support a good user experience:</p>
+                <ul>
+                    <li><strong>Consistent Uptime (99.9%+):</strong> Minimizes missed traffic and revenue opportunities.</li>
+                    <li><strong>Good Server Response Times:</strong> A fast backend is the first step to a quick-loading page.</li>
+                    <li><strong>Free SSL Certificate:</strong> Essential for security, user trust, and SEO (HTTPS is a ranking factor).</li>
+                    <li><strong>WordPress Optimization (if using WP):</strong> Servers configured for WordPress can improve performance.</li>
+                    <li><strong>Scalability Options:</strong> The ability to upgrade resources as your traffic grows.</li>
+                </ul>
+            </div>
+
+            <h3>Managed WordPress Hosting: An Option for Publishers</h3>
+            <p>For WordPress users, managed hosting can simplify technical maintenance. Providers handle updates, security, and caching, allowing you to focus on content. This can be a worthwhile investment as your site grows.</p>
+
+            <div class="affiliate-box">
+                <h3>Considering Bluehost for Your Site?</h3>
+                <p>Bluehost is a popular web hosting provider, especially for beginners, and is officially recommended by WordPress.org. It can be a suitable starting point for new publishers looking for an all-in-one solution that includes a domain and SSL.</p>
+                <ul>
+                    <li>✅ Offers 1-click WordPress installation.</li>
+                    <li>✅ Includes a free domain for the first year and a free SSL certificate.</li>
+                    <li>✅ Provides 24/7 customer support.</li>
+                    <li>✅ Features a 30-day money-back guarantee.</li>
+                </ul>
+                <p style="margin-top:1rem;">If you're starting a new site and value simplicity, it's one option to research.</p>
+                <a href="https://bluehost.sjv.io/kOyaQz" class="btn btn-secondary" style="margin-top:1rem;" rel="nofollow">Visit Bluehost for Details</a>
+                <p class="affiliate-disclaimer"><strong>Disclosure:</strong> This is an affiliate link. If you make a purchase through this link, we may earn a commission at no additional cost to you. This supports the maintenance of our free tools and content. We are not affiliated with Google AdSense.</p>
+            </div>
+        </section>
+
+        <section class="container content-section" id="faq">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question">What is the difference between RPM and CPM?<span class="faq-toggle">+</span></div>
+                <div class="faq-answer">
+                    <p>CPM (Cost Per Mille) is the rate advertisers pay for 1,000 ad impressions. RPM (Revenue Per Mille) is what you, the publisher, earn from 1,000 page views. Your RPM is typically lower than the CPM because it represents your share of the revenue after the ad network's fee.</p>
                 </div>
             </div>
-        </div>
-
-        <!-- Main Article Content (2500+ Words) -->
-        <section class="article-content" id="article">
-            <div class="container">
-                <div class="article-section">
-                    <h2>What is AdSense RPM and Why It Matters for Your Website Revenue</h2>
-                    <p>Revenue Per Mille (RPM) is one of the most important metrics for any website monetized with Google AdSense. Unlike CPM (Cost Per Mille) which measures what advertisers pay, RPM measures what you actually earn for every 1,000 page views on your website. Understanding and optimizing your RPM can mean the difference between earning $100 per month and $1,000 per month with the same amount of traffic.</p>
-                    
-                    <p>In this comprehensive 2500+ word guide, we'll not only show you how to calculate your RPM accurately but also reveal the hidden factors that affect your earnings. Most importantly, we'll explain why your choice of web hosting directly impacts your RPM, AdSense approval chances, and Google search rankings.</p>
-                    
-                    <div class="highlight-box">
-                        <h4>Key Insight: The Hosting-RPM Connection</h4>
-                        <p>Most publishers don't realize that their web hosting provider directly affects their AdSense RPM. Slow loading speeds (common with cheap hosting) lead to higher bounce rates, lower ad viewability, and ultimately reduced RPM. Google's Core Web Vitals now directly impact search rankings, making hosting performance more important than ever for revenue optimization.</p>
-                    </div>
+            <div class="faq-item">
+                <div class="faq-question">Why does my RPM fluctuate daily?<span class="faq-toggle">+</span></div>
+                <div class="faq-answer">
+                    <p>Daily fluctuations are normal due to changes in advertiser demand, the mix of traffic sources, the specific pages viewed, and user behavior. It's more useful to track your average RPM over weekly or monthly periods to spot trends.</p>
                 </div>
-                
-                <div class="article-section">
-                    <h2>How to Calculate RPM Accurately: Beyond Basic Formula</h2>
-                    <p>The basic RPM formula is simple: <strong>RPM = (Estimated Earnings ÷ Number of Page Views) × 1000</strong>. However, accurate RPM analysis requires understanding several nuances:</p>
-                    
-                    <ul>
-                        <li><strong>Time Frame Considerations:</strong> RPM fluctuates daily based on advertiser demand, seasonality, and content performance. Monthly RPM provides more stable insights than daily RPM.</li>
-                        <li><strong>Traffic Source Variations:</strong> RPM from organic search traffic is typically 40-60% higher than social media traffic due to higher user intent and engagement.</li>
-                        <li><strong>Geographic Factors:</strong> Traffic from Tier-1 countries (US, UK, Canada, Australia) generates 3-5x higher RPM than traffic from developing nations.</li>
-                        <li><strong>Content Type Impact:</strong> "How-to" guides and product reviews typically have 20-30% higher RPM than news or entertainment content.</li>
-                    </ul>
-                    
-                    <p>Our RPM calculator above takes these factors into consideration by allowing you to adjust CPC values and analyze results across different time periods.</p>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Does better hosting directly increase RPM?<span class="faq-toggle">+</span></div>
+                <div class="faq-answer">
+                    <p>Not directly. Hosting affects site speed and reliability. A faster, more stable site improves user experience, which can lower bounce rates and increase page views. This, combined with the SEO benefits of speed, can lead to more traffic and ad impressions, potentially increasing overall earnings. It's an important foundational factor.</p>
                 </div>
-                
-                <div class="article-section">
-                    <h2>The Hidden Truth: Why Cheap Hosting Destroys Your AdSense Revenue</h2>
-                    
-                    <div class="warning-box">
-                        <h4>⚠️ The Cheap Hosting Trap</h4>
-                        <p>Many new publishers choose budget hosting ($1-3/month) to save costs, not realizing they're sacrificing 50-70% of their potential AdSense revenue. Here's how cheap hosting hurts your earnings:</p>
-                    </div>
-                    
-                    <h3>1. Slow Loading Speed = Lower RPM</h3>
-                    <p>Google's research shows that as page load time increases from 1 second to 5 seconds, bounce probability increases by 90%. Every additional second of loading time reduces ad viewability by approximately 4%. With cheap shared hosting where hundreds of websites share the same server resources, your site's speed becomes unpredictable and often painfully slow during traffic spikes.</p>
-                    
-                    <h3>2. Poor Uptime = Lost Revenue Opportunities</h3>
-                    <p>If your website is down, you're not earning. Many budget hosting providers have 95-97% uptime (which sounds good until you realize that's 3-5% downtime = 11-18 days per year of no revenue). Quality hosting like Bluehost offers 99.9% uptime guarantees.</p>
-                    
-                    <h3>3. Technical Limitations = No Room to Grow</h3>
-                    <p>As your traffic grows, cheap hosting often can't scale. You'll face CPU limits, memory restrictions, and forced upgrades at critical moments when your content is going viral and could generate maximum revenue.</p>
-                    
-                    <h3>4. Security Vulnerabilities = Risk of AdSense Ban</h3>
-                    <p>Compromised websites often get flagged for malicious ads or redirects, leading to AdSense account suspension. Quality hosting includes robust security features that protect both your site and your AdSense account.</p>
-                    
-                    <table class="comparison-table">
-                        <thead>
-                            <tr>
-                                <th>Feature</th>
-                                <th>Cheap Hosting ($1-3/month)</th>
-                                <th>Bluehost WordPress Hosting</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Average Load Time</td>
-                                <td class="bad">3-8 seconds</td>
-                                <td class="good">1-2 seconds</td>
-                            </tr>
-                            <tr>
-                                <td>Uptime Guarantee</td>
-                                <td class="bad">95-97%</td>
-                                <td class="good">99.9%</td>
-                            </tr>
-                            <tr>
-                                <td>Free SSL Certificate</td>
-                                <td class="bad">Often extra cost</td>
-                                <td class="good">Included free</td>
-                            </tr>
-                            <tr>
-                                <td>WordPress Optimization</td>
-                                <td class="bad">Basic</td>
-                                <td class="good">Fully optimized</td>
-                            </tr>
-                            <tr>
-                                <td>AdSense Approval Success</td>
-                                <td class="bad">Low (technical issues)</td>
-                                <td class="good">High (meets requirements)</td>
-                            </tr>
-                            <tr>
-                                <td>Average RPM Impact</td>
-                                <td class="bad">Reduces by 40-60%</td>
-                                <td class="good">Increases by 20-40%</td>
-                            </tr>
-                        </tbody>
-                    </table>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How long does it take to get AdSense approval?<span class="faq-toggle">+</span></div>
+                <div class="faq-answer">
+                    <p>The review process usually takes a few days to a couple of weeks. Approval depends on having sufficient original content, a clear site structure, an "About" page, a privacy policy, and contact information. There's no specific traffic requirement, but having some organic traffic can help.</p>
                 </div>
-                
-                <div class="article-section">
-                    <h2>How Bluehost Specifically Helps Increase Your AdSense RPM</h2>
-                    <p>Bluehost isn't just another hosting provider - it's specifically optimized for WordPress websites and AdSense publishers. Here's how using Bluehost can directly boost your RPM:</p>
-                    
-                    <h3>1. Speed Optimization for Better Ad Viewability</h3>
-                    <p>Bluehost's WordPress-optimized servers are configured specifically for content-heavy sites with ads. Their built-in caching, CDN integration, and optimized server stack ensure your pages load in 1-2 seconds, which is the sweet spot for maximum ad viewability and user engagement.</p>
-                    
-                    <h3>2. Technical Foundation for AdSense Approval</h3>
-                    <p>Google AdSense requires HTTPS (SSL certificate), reasonable loading speed, and stable uptime. Bluehost provides free SSL certificates, meets all technical requirements, and gives your site the professional foundation that increases AdSense approval chances.</p>
-                    
-                    <h3>3. Better Google Rankings = More Traffic = More Revenue</h3>
-                    <p>Since Google's Core Web Vitals update, page speed directly impacts search rankings. Bluehost's performance advantages help your content rank higher, bringing more organic traffic that converts better for AdSense earnings.</p>
-                    
-                    <div class="highlight-box">
-                        <h4>Case Study: RPM Increase After Hosting Migration</h4>
-                        <p>One of our test sites migrated from budget hosting to Bluehost and saw these improvements over 90 days:
-                        <br>• Page load time: Reduced from 4.2s to 1.8s
-                        <br>• Organic traffic: Increased by 67%
-                        <br>• AdSense RPM: Increased from $3.42 to $5.87 (+72%)
-                        <br>• Total monthly revenue: Increased from $214 to $512 (+139%)</p>
-                    </div>
-                </div>
-                
-                <div class="article-section">
-                    <h2>Step-by-Step: How to Set Up Your Website for Maximum RPM</h2>
-                    
-                    <h3>Step 1: Choose the Right Hosting (Bluehost Recommendation)</h3>
-                    <p>Start with a solid foundation. For new AdSense publishers, we recommend Bluehost's Basic WordPress hosting plan because:</p>
-                    <ul>
-                        <li>It includes a <strong>free domain name</strong> for the first year (saves $10-15)</li>
-                        <li>Comes with <strong>free SSL certificate</strong> (required for AdSense)</li>
-                        <li>Offers <strong>1-click WordPress installation</strong> (saves hours of setup time)</li>
-                        <li>Provides <strong>24/7 expert support</strong> (crucial for beginners)</li>
-                        <li>Has <strong>30-day money-back guarantee</strong> (risk-free trial)</li>
-                    </ul>
-                    
-                    <p><strong>Pro Tip:</strong> Use our exclusive Bluehost link to get the <strong>70% discount + free domain</strong> offer that's not available on their main website.</p>
-                    
-                    <div style="text-align: center; margin: 30px 0;">
-                        <a href="https://bluehost.sjv.io/kOyaQz" target="_blank" class="bluehost-btn" style="width: auto; display: inline-block; padding: 18px 40px;">
-                            👉 Click Here to Get Bluehost at 70% Discount + Free Domain
-                        </a>
-                        <p style="font-size: 12px; color: var(--light-text); margin-top: 10px;">
-                            <strong>Disclosure:</strong> Affiliate link - we earn commission if you purchase. No extra cost to you. Supports our free content.
-                        </p>
-                    </div>
-                    
-                    <h3>Step 2: Optimize Your Website for AdSense</h3>
-                    <p>Once your hosting is set up, focus on these AdSense optimization strategies:</p>
-                    <ul>
-                        <li><strong>Ad Placement:</strong> Place ads "above the fold" and within content for better viewability</li>
-                        <li><strong>Content Strategy:</strong> Create in-depth, keyword-optimized content (1500+ words per article)</li>
-                        <li><strong>Mobile Optimization:</strong> Ensure your theme is fully responsive (Bluehost themes are)</li>
-                        <li><strong>Site Structure:</strong> Clear navigation, internal linking, and fast-loading pages</li>
-                    </ul>
-                    
-                    <h3>Step 3: Monitor and Improve Your RPM Continuously</h3>
-                    <p>Use our RPM calculator monthly to track your progress. Aim for these RPM benchmarks based on website maturity:</p>
-                    <ul>
-                        <li><strong>New websites (0-6 months):</strong> $2-5 RPM is normal</li>
-                        <li><strong>Growing websites (6-18 months):</strong> $5-12 RPM with optimization</li>
-                        <li><strong>Established websites (18+ months):</strong> $12-25+ RPM with premium hosting and advanced optimization</li>
-                    </ul>
-                </div>
-                
-                <div class="article-section">
-                    <h2>Common RPM Problems and Solutions</h2>
-                    
-                    <h3>Problem: Low RPM Despite Good Traffic</h3>
-                    <p><strong>Solution:</strong> This often indicates technical issues. Check your website speed using Google PageSpeed Insights. If scores are below 70, consider upgrading your hosting. Bluehost's optimized WordPress hosting typically improves PageSpeed scores by 20-40 points.</p>
-                    
-                    <h3>Problem: RPM Fluctuations Day-to-Day</h3>
-                    <p><strong>Solution:</strong> Daily fluctuations are normal. Focus on weekly and monthly averages. Ensure your hosting provides consistent performance during traffic spikes.</p>
-                    
-                    <h3>Problem: High Traffic but Low Earnings</h3>
-                    <p><strong>Solution:</strong> Analyze your traffic sources. Social media traffic typically has lower RPM. Focus on SEO to increase organic traffic which has higher RPM. Quality hosting improves SEO rankings.</p>
-                    
-                    <div class="warning-box">
-                        <h4>⚠️ Avoid These Common Mistakes</h4>
-                        <ul>
-                            <li><strong>Don't</strong> use too many ads - this hurts user experience and violates AdSense policies</li>
-                            <li><strong>Don't</strong> ignore mobile users - 60-70% of traffic comes from mobile</li>
-                            <li><strong>Don't</strong> choose hosting based on price alone - consider performance impact on revenue</li>
-                            <li><strong>Don't</strong> expect instant results - RPM optimization takes 3-6 months of consistent effort</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="article-section">
-                    <h2>Why We Specifically Recommend Bluehost for AdSense Publishers</h2>
-                    <p>After testing 12+ hosting providers with AdSense websites over 3 years, Bluehost consistently delivers the best balance of performance, features, and value for publishers. Here's our honest assessment:</p>
-                    
-                    <h3>Bluehost Advantages:</h3>
-                    <ul>
-                        <li><strong>WordPress Recommended:</strong> Officially recommended by WordPress since 2005</li>
-                        <li><strong>Beginner Friendly:</strong> Easy setup even with zero technical knowledge</li>
-                        <li><strong>AdSense Ready:</strong> Meets all technical requirements for approval</li>
-                        <li><strong>Scalable:</strong> Can grow with your website from 0 to 100,000 visitors/month</li>
-                        <li><strong>Cost Effective:</strong> With our discount link, starts at just $2.95/month</li>
-                    </ul>
-                    
-                    <h3>Considerations:</h3>
-                    <ul>
-                        <li>Renewal prices increase after first term (standard in hosting industry)</li>
-                        <li>Basic plan has storage limits (unlimited on higher plans)</li>
-                        <li>Not the absolute fastest enterprise hosting (but 3-5x faster than budget options)</li>
-                    </ul>
-                    
-                    <p><strong>Our Verdict:</strong> For 95% of AdSense publishers, Bluehost provides the optimal hosting solution that balances cost, performance, and ease of use. The performance improvements directly translate to higher RPM and better AdSense earnings.</p>
-                    
-                    <div style="background: #f0f8ff; padding: 25px; border-radius: var(--radius); margin: 30px 0; border-left: 4px solid #0073aa;">
-                        <h4 style="color: #0073aa;">Final Recommendation</h4>
-                        <p>If you're serious about building a profitable AdSense website, start with the right foundation. Based on our extensive testing and real-world results:</p>
-                        <ol style="margin-top: 15px;">
-                            <li>Use our Bluehost link to get the 70% discount + free domain</li>
-                            <li>Choose the Basic WordPress hosting plan ($2.95/month with our link)</li>
-                            <li>Install WordPress with 1-click during setup</li>
-                            <li>Focus on creating quality content while Bluehost handles performance</li>
-                            <li>Use our RPM calculator monthly to track your earnings growth</li>
-                        </ol>
-                        <p style="margin-top: 20px; text-align: center;">
-                            <a href="https://bluehost.sjv.io/kOyaQz" target="_blank" class="bluehost-btn" style="width: auto; display: inline-block; padding: 15px 30px; font-size: 16px;">
-                                🚀 Start with Bluehost Today (70% Discount)
-                            </a>
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="article-section">
-                    <h2>FAQs: AdSense RPM and Hosting Questions</h2>
-                    <div class="faq-container">
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                What's a good RPM for a new website?
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>For new websites (0-6 months), $2-5 RPM is normal. Don't compare with established sites earning $15-30 RPM. Focus on creating quality content and improving website speed. With proper hosting like Bluehost and optimization, you should reach $5-8 RPM within 6-12 months.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                Does hosting really affect AdSense earnings?
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Yes, significantly. Our tests show moving from budget hosting to optimized hosting like Bluehost increases RPM by 40-70% on average. Slow hosting causes higher bounce rates, lower ad viewability, and poor Core Web Vitals scores that hurt Google rankings and reduce organic traffic.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                Why do you recommend Bluehost specifically?
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>We recommend Bluehost because: 1) It's officially WordPress-recommended, 2) Provides free SSL required for AdSense, 3) Offers beginner-friendly setup, 4) Has reliable 99.9% uptime, 5) Delivers good performance for the price, and 6) Our readers get exclusive 70% discount. We've tested alternatives and Bluehost offers the best value for AdSense publishers.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                Is Bluehost good for AdSense approval?
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Yes, Bluehost meets all technical requirements for AdSense approval: HTTPS/SSL (free), reasonable loading speed, stable uptime, and professional infrastructure. While hosting alone doesn't guarantee approval (content quality matters most), Bluehost eliminates technical barriers that often cause rejections with cheap hosting.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                How long does it take to see RPM improvement after changing hosting?
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Immediate improvements in page speed (within 24 hours). SEO ranking improvements take 4-8 weeks as Google recrawls your faster site. RPM increases are usually noticeable within 30-60 days as bounce rates decrease and ad viewability improves. Most publishers see 20-40% RPM increase in the first 90 days after migrating to better hosting.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                What if I already have hosting but want to switch to Bluehost?
-                                <span class="faq-toggle">+</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Bluehost offers free migration for most WordPress sites. Contact their support after signing up. The migration process typically takes 24-48 hours with minimal downtime. We recommend switching if your current hosting has: 1) Load time >3 seconds, 2) Frequent downtime, 3) No free SSL, or 4) Poor customer support. The RPM improvement usually justifies the migration effort.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="article-section">
-                    <h2>Conclusion: Start Right, Earn More</h2>
-                    <p>Your AdSense RPM isn't just about ad placement or content quality - it starts with your hosting foundation. Choosing the right hosting provider like Bluehost can mean earning $500 vs. $1,000 per month with the same amount of traffic.</p>
-                    
-                    <p>Remember these key takeaways:</p>
-                    <ol>
-                        <li><strong>RPM Optimization Starts with Hosting:</strong> Fast, reliable hosting directly increases ad viewability and earnings</li>
-                        <li><strong>Don't Sacrifice Revenue for Savings:</strong> The $2/month you save on cheap hosting could cost you $200/month in lost RPM</li>
-                        <li><strong>Bluehost Offers AdSense-Ready Foundation:</strong> Free SSL, WordPress optimization, and good performance meet AdSense requirements</li>
-                        <li><strong>Track Your Progress:</strong> Use our RPM calculator monthly to monitor improvements</li>
-                        <li><strong>Focus on Long-Term Growth:</strong> Building a profitable AdSense site takes 6-18 months with the right foundation</li>
-                    </ol>
-                    
-                    <div style="background: #e8f5e9; padding: 25px; border-radius: var(--radius); margin: 30px 0; text-align: center;">
-                        <h4 style="color: #2e7d32;">Ready to Increase Your AdSense RPM?</h4>
-                        <p style="margin-bottom: 20px;">Start with the right hosting foundation today. Use our exclusive link to get Bluehost at 70% discount + free domain.</p>
-                        <a href="https://bluehost.sjv.io/kOyaQz" target="_blank" class="bluehost-btn" style="width: auto; display: inline-block; padding: 18px 40px;">
-                            🚀 Get Bluehost Now (70% Discount + Free Domain)
-                        </a>
-                        <p style="font-size: 12px; color: #666; margin-top: 15px;">
-                            <strong>Full Disclosure:</strong> This is an affiliate link. We earn commission if you purchase through this link at no extra cost to you. This supports our free RPM calculator and 2500+ word guides. We only recommend products we've thoroughly tested and believe will help AdSense publishers succeed.
-                        </p>
-                    </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What's the most important factor for increasing RPM?<span class="faq-toggle">+</span></div>
+                <div class="faq-answer">
+                    <p>There's no single factor. A holistic approach works best: creating high-quality content that attracts a targeted audience, ensuring a fast and seamless user experience across all devices, and implementing ads thoughtfully without disrupting that experience.</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>AdSense Calculator</h3>
-                    <p>Free tools and 2500+ word guides to help publishers maximize AdSense revenue. We provide honest hosting reviews and RPM optimization strategies.</p>
-                    <p><strong>Affiliate Disclosure:</strong> We earn commissions from Bluehost and other recommendations. No extra cost to you.</p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>AdSense Tools</h3>
+                    <a href="/">RPM Calculator</a>
+                    <a href="https://aawaish583-png.github.io/adsense-rpm-calculator/increase-adsense-rpm.html">Increase RPM Guide</a>
+                    <a href="https://aawaish583-png.github.io/adsense-rpm-calculator/best-hosting-for-adsense.html">Hosting for AdSense</a>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <a href="#">Home</a>
-                    <a href="#calculator">RPM Calculator</a>
-                    <a href="#article">Full Guide</a>
-                    <a href="#faq">FAQ</a>
+                <div class="footer-col">
+                    <h3>Hosting Reviews</h3>
                     <a href="https://aawaish583-png.github.io/adsense-rpm-calculator/bluehost-review.html">Bluehost Review</a>
+                    <a href="https://aawaish583-png.github.io/adsense-rpm-calculator/bluehost-vs-cheap-hosting.html">Hosting Comparison</a>
+                    <a href="https://aawaish583-png.github.io/adsense-rpm-calculator/best-wordpress-hosting.html">WordPress Hosting</a>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>Hosting Guides</h3>
-                    <a href="https://aawaish583-png.github.io/adsense-rpm-calculator/best-hosting-for-adsense.html">Best Hosting for AdSense</a>
-                    <a href="https://aawaish583-png.github.io/adsense-rpm-calculator/bluehost-vs-cheap-hosting.html">Bluehost vs Cheap Hosting</a>
-                    <a href="https://aawaish583-png.github.io/adsense-rpm-calculator/increase-adsense-rpm.html">Increase AdSense RPM</a>
-                    <a href="https://aawaish583-png.github.io/adsense-rpm-calculator/best-wordpress-hosting.html">Best WordPress Hosting</a>
-                </div>
-                
-                <div class="footer-section">
+                <div class="footer-col">
                     <h3>Legal & Info</h3>
                     <a href="https://aawaish583-png.github.io/adsense-rpm-calculator/privacy-policy.html">Privacy Policy</a>
                     <a href="https://aawaish583-png.github.io/adsense-rpm-calculator/terms-of-service.html">Terms of Service</a>
                     <a href="https://aawaish583-png.github.io/adsense-rpm-calculator/affiliate-disclosure.html">Affiliate Disclosure</a>
-                    <a href="https://aawaish583-png.github.io/adsense-rpm-calculator/contact.html">Contact Us</a>
                     <a href="https://aawaish583-png.github.io/adsense-rpm-calculator/about-us.html">About Us</a>
+                    <a href="https://aawaish583-png.github.io/adsense-rpm-calculator/contact.html">Contact</a>
                 </div>
             </div>
-            
             <div class="copyright">
-                <p>© 2024 AdSense RPM Calculator. All content is original, human-written, and 100% plagiarism-free. This site is not affiliated with Google AdSense or Bluehost. We provide independent analysis and recommendations.</p>
-                <p>Calculations are estimates. Actual AdSense earnings may vary. Bluehost is a trademark of Bluehost Inc. Our recommendations are based on independent testing.</p>
+                <p>© <span id="current-year">2024</span> AdSense RPM Calculator. This site provides educational content and tools. We are not affiliated with Google AdSense or any third-party hosting company.</p>
+                <p>All calculations are estimates. Actual earnings may vary.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mainNav = document.getElementById('mainNav');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            mainNav.classList.toggle('active');
+        // Mobile Menu Toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
         });
-        
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (event) => {
-            if (!mainNav.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
-                mainNav.classList.remove('active');
-            }
-        });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                if(this.getAttribute('href') === '#') return;
-                
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu after clicking a link
-                    mainNav.classList.remove('active');
-                }
+        // Close menu when clicking a link (for mobile)
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('nav ul').classList.remove('active');
             });
         });
-        
-        // FAQ toggle functionality
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const faqItem = question.parentElement;
-                faqItem.classList.toggle('active');
-            });
-        });
-        
-        // CPC slider value display
+        // CPC Slider Value Display
         const cpcSlider = document.getElementById('cpc');
-        const cpcValue = document.getElementById('cpcValue');
-        
+        const cpcValue = document.getElementById('cpc-value');
         cpcSlider.addEventListener('input', () => {
             cpcValue.textContent = '$' + parseFloat(cpcSlider.value).toFixed(2);
+            calculateRPM();
         });
-        
-        // Smart recommendation logic
-        function showSmartRecommendation(rpm, pageviews) {
-            const recommendationSection = document.getElementById('recommendationSection');
-            const problemText = document.getElementById('problemText');
-            const problemList = document.getElementById('problemList');
-            
-            // Clear previous content
-            problemList.innerHTML = '';
-            
-            // Determine problem type based on RPM
-            let problemType = '';
-            let specificProblems = [];
-            let solutionFocus = '';
-            
-            if (rpm < 3) {
-                problemType = 'very low';
-                specificProblems = [
-                    'Slow Website Speed: Page load time > 3 seconds reduces ad viewability',
-                    'Poor Hosting Infrastructure: Shared hosting with limited resources affects performance',
-                    'Technical SEO Issues: Poor mobile optimization and Core Web Vitals',
-                    'Low-Quality Traffic: Possible high bounce rate from irrelevant sources',
-                    'Non-Optimized Ad Placement: Ads placed in low-visibility areas'
-                ];
-                solutionFocus = 'Bluehost can improve speed by 60-80% and provide better infrastructure for ad optimization';
-            } else if (rpm < 6) {
-                problemType = 'low';
-                specificProblems = [
-                    'Moderate Speed Issues: Load times between 2-4 seconds affect user engagement',
-                    'Shared Hosting Limitations: Resource constraints during traffic spikes',
-                    'Ad Placement Optimization Needed: Better ad units could increase viewability',
-                    'Content Optimization Required: Higher-quality content attracts better-paying ads',
-                    'Mobile Performance: Could be improved for better Core Web Vitals'
-                ];
-                solutionFocus = 'Bluehost\'s optimized WordPress hosting improves speed and provides stable performance for growth';
-            } else if (rpm < 10) {
-                problemType = 'average';
-                specificProblems = [
-                    'Good but Could Be Better: Room for improvement in page speed',
-                    'Scaling Considerations: Current hosting may struggle with traffic growth',
-                    'Advanced Optimization: Could implement more sophisticated ad strategies',
-                    'Technical Improvements: Better caching and CDN could boost performance',
-                    'Revenue Growth: Potential to increase RPM with better infrastructure'
-                ];
-                solutionFocus = 'Bluehost offers scalable solutions that grow with your website and support higher RPM targets';
-            } else {
-                problemType = 'good';
-                specificProblems = [
-                    'Solid Performance: Your RPM indicates good optimization',
-                    'Growth Focus: Now focus on scaling traffic and revenue',
-                    'Infrastructure Planning: Ensure hosting can handle increased traffic',
-                    'Advanced Monetization: Consider additional revenue streams',
-                    'Long-Term Stability: Professional hosting ensures consistent performance'
-                ];
-                solutionFocus = 'Bluehost provides reliable, scalable hosting to maintain and build on your current success';
-            }
-            
-            // Update problem text
-            problemText.textContent = `Your estimated RPM of $${rpm.toFixed(2)} is ${problemType} compared to optimal ranges for monetized websites. Based on our analysis of thousands of AdSense sites, here are the most relevant factors affecting your earnings:`;
-            
-            // Add problem list items
-            specificProblems.forEach(problem => {
-                const li = document.createElement('li');
-                li.innerHTML = `<strong>${problem.split(':')[0]}:</strong> ${problem.split(':')[1]}`;
-                problemList.appendChild(li);
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const toggle = question.querySelector('.faq-toggle');
+                answer.classList.toggle('active');
+                toggle.classList.toggle('active');
             });
-            
-            // Add root cause analysis
-            const rootCause = document.createElement('p');
-            rootCause.innerHTML = `<strong>Root Cause:</strong> ${solutionFocus}`;
-            problemList.parentNode.appendChild(rootCause);
-            
-            // Show recommendation section
-            recommendationSection.classList.add('active');
-            
-            // Scroll to recommendation
-            setTimeout(() => {
-                recommendationSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 500);
-        }
-        
-        // Calculate function
+        });
+        // RPM Calculation Function
         function calculateRPM() {
-            // Get input values
             const earnings = parseFloat(document.getElementById('earnings').value) || 0;
             const pageviews = parseInt(document.getElementById('pageviews').value) || 1;
             const days = parseInt(document.getElementById('days').value) || 1;
-            const cpc = parseFloat(document.getElementById('cpc').value) || 0.5;
-            
-            // Calculate RPM
+            const cpc = parseFloat(cpcSlider.value) || 0.5;
             const rpm = (earnings / pageviews) * 1000;
-            
-            // Calculate CPM (estimated based on CPC and typical click-through rate)
-            // Assuming a 1% CTR for estimation purposes
             const estimatedCTR = 0.01;
             const cpm = cpc * estimatedCTR * 1000;
-            
-            // Calculate daily and monthly revenue
-            const dailyRevenue = earnings / days;
-            const monthlyRevenue = (earnings / days) * 30;
-            
-            // Update result displays
-            document.getElementById('rpmResult').textContent = '$' + rpm.toFixed(2);
-            document.getElementById('cpmResult').textContent = '$' + cpm.toFixed(2);
-            document.getElementById('dailyResult').textContent = '$' + dailyRevenue.toFixed(2);
-            document.getElementById('monthlyResult').textContent = '$' + monthlyRevenue.toFixed(2);
-            
-            // Show smart recommendation
-            showSmartRecommendation(rpm, pageviews);
-        }
-        
-        // Calculate on button click
-        document.getElementById('calculateBtn').addEventListener('click', calculateRPM);
-        
-        // Calculate on input change
-        document.querySelectorAll('.calculator-inputs input').forEach(input => {
-            input.addEventListener('input', calculateRPM);
-        });
-        
-        // Calculate on page load
-        window.addEventListener('DOMContentLoaded', calculateRPM);
-        
-        // Set current year in footer
-        document.addEventListener('DOMContentLoaded', function() {
-            const yearElement = document.querySelector('.copyright p');
-            if(yearElement) {
-                const currentYear = new Date().getFullYear();
-                yearElement.innerHTML = yearElement.innerHTML.replace('2024', currentYear);
+            const daily = earnings / days;
+            const monthly = (earnings / days) * 30;
+            document.getElementById('rpm-result').textContent = '$' + rpm.toFixed(2);
+            document.getElementById('cpm-result').textContent = '$' + cpm.toFixed(2);
+            document.getElementById('daily-result').textContent = '$' + daily.toFixed(2);
+            document.getElementById('monthly-result').textContent = '$' + monthly.toFixed(2);
+            // Analysis Logic
+            const analysisBox = document.getElementById('analysis-box');
+            const analysisText = document.getElementById('analysis-text');
+            let analysis = '';
+            if (rpm < 5) {
+                analysis = 'Your estimated RPM is on the lower side. This is common for new sites. Focus on creating valuable content for a specific audience and improving page load speed.';
+            } else if (rpm < 15) {
+                analysis = 'Your estimated RPM is in a moderate range. To improve, consider deepening your content, optimizing ad placement, and enhancing site-wide user experience.';
+            } else {
+                analysis = 'Your estimated RPM is relatively strong. Continue focusing on high-quality content and user experience. Explore diversifying revenue streams.';
             }
+            analysisText.textContent = analysis;
+            analysisBox.style.display = 'block';
+        }
+        // Attach calculation to inputs and button
+        document.getElementById('calculate-btn').addEventListener('click', calculateRPM);
+        ['earnings', 'pageviews', 'days'].forEach(id => {
+            document.getElementById(id).addEventListener('input', calculateRPM);
         });
-        
-        // Add smooth scroll for internal links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 100,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        // Initial calculation
+        calculateRPM();
     </script>
 </body>
 </html>
