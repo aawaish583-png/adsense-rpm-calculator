@@ -526,12 +526,14 @@ footer a:hover {
                     <a href="https://aawaish583-png.github.io/adsense-rpm-calculator/bluehost-vs-cheap-hosting.html">Hosting Comparison</a>
                     <a href="https://aawaish583-png.github.io/adsense-rpm-calculator/best-wordpress-hosting.html">WordPress Hosting</a>
                 </div>
-                <div class="social-buttons">
-                   <a href="https://www.facebook.com/share/1AqAhv9pAt/" class="social fb">Facebook</a>
-                   <a href="https://youtube.com/@yourchannel" class="social yt">YouTube</a>
-                   <a href="https://linkedin.com/in/yourprofile" class="social in">LinkedIn</a>
-                   <a href="https://pinterest.com/yourprofile" class="social pin">Pinterest</a>
-                </div>
+                <div class="share-box">
+                <p>📢 Share this tool:</p>
+                 <a href="https://www.facebook.com/share/1CFNPjqaoV/" onclick="shareFacebook()" class="share fb">Facebook</a>
+                <a href="https://x.com/KaifAbbasi786" onclick="shareTwitter()" class="share tw">Twitter</a> vo                <a href="#" onclick="shareLinkedIn()" class="share in">LinkedIn</a>
+                 <a href="https://pin.it/415AJaxCy" onclick="sharePinterest()" class="share pin">Pinterest</a>
+                 <a href="#" onclick="shareWhatsApp()" class="share wa">WhatsApp</a>
+               </div>
+
                 
                 <div class="footer-col">
                     <h3>Legal & Info</h3>
@@ -550,6 +552,35 @@ footer a:hover {
     </footer>
 
     <script>
+        // Social botton 
+        function shareFacebook() {
+  let url = encodeURIComponent(window.location.href);
+  window.open("https://www.facebook.com/sharer/sharer.php?u=" + url, "_blank");
+}
+
+function shareTwitter() {
+  let url = encodeURIComponent(window.location.href);
+  let text = encodeURIComponent(document.title);
+  window.open("https://twitter.com/intent/tweet?url=" + url + "&text=" + text, "_blank");
+}
+
+function shareLinkedIn() {
+  let url = encodeURIComponent(window.location.href);
+  window.open("https://www.linkedin.com/sharing/share-offsite/?url=" + url, "_blank");
+}
+
+function sharePinterest() {
+  let url = encodeURIComponent(window.location.href);
+  let text = encodeURIComponent(document.title);
+  window.open("https://pinterest.com/pin/create/button/?url=" + url + "&description=" + text, "_blank");
+}
+
+function shareWhatsApp() {
+  let url = encodeURIComponent(window.location.href);
+  let text = encodeURIComponent(document.title);
+  window.open("https://api.whatsapp.com/send?text=" + text + "%20" + url, "_blank");
+}
+        
         // Mobile Menu Toggle
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.querySelector('nav ul').classList.toggle('active');
